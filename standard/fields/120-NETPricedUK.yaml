@@ -1,0 +1,9 @@
+name: NETPricedUK
+label: NETPricedUK
+position: 120
+tier: extended
+owner: distributor
+type: Y/N
+required: 'no'
+length: '1'
+description: Boolean Y/N to indicate there is a Net Price in UK

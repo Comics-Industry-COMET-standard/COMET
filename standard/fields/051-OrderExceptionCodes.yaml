@@ -1,0 +1,11 @@
+name: OrderExceptionCodes
+label: OrderExceptionCodes
+position: 51
+tier: core
+owner: publisher
+type: Composite
+required: 'no'
+length: '2048'
+description: |-
+  Comma separated list of barcodes outside of the default set that are to be EXCLUDED in ratio threshhold math.
+example: 76194137779700191, 76194137779700122

@@ -1,0 +1,9 @@
+name: DistributorPublisherCode
+label: DistributorPublisherCode
+position: 121
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+length: '10'
+description: A code for the publisher that indicates the internal code for the distributor.

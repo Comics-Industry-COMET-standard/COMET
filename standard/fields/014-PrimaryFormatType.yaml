@@ -1,0 +1,13 @@
+name: PrimaryFormatType
+label: PrimaryFormatType
+position: 14
+tier: core
+owner: publisher
+type: Pick List
+required: 'yes'
+length: '2'
+picklist: FormatType
+description: |-
+  The PrimaryFormatType field contains a code that corresponds to the specific format of the item. Book, Merchandise (See FormatTypes in the data definitions). This should start from the outside of the product to the inside (a slipcase is outside of hardcovers, for example). For example, if an item is a box set of hardcovers, the FormatType should be BX.
+example: CB
+notes: See the FormatType table in the Data Definitions.

@@ -1,0 +1,11 @@
+name: UnitWeight
+label: Unit Weight
+position: 78
+tier: core
+owner: publisher
+type: Decimal
+required: 'yes'
+length: 10,4
+description: |-
+  The weight field displays the weight of the item in pounds (Imperial) or grams (Metric), rounded to the fourth decimal place.
+example: '6.9991'

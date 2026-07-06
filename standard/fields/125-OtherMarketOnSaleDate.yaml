@@ -1,0 +1,10 @@
+name: OtherMarketOnSaleDate
+label: OtherMarketOnSaleDate
+position: 125
+tier: extended
+owner: distributor
+type: Date
+required: 'no'
+length: '10'
+description: |-
+  The date that other markets outside the comics industry may offer this item on sale, expressed in YYYY-MM-DD. Example 2023-10-13

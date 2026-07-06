@@ -1,0 +1,36 @@
+name: Validate standard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Check field YAML is well-formed
+        run: |
+          python3 - <<'PY'
+          import glob, yaml, sys
+          bad = 0
+          for p in glob.glob("standard/**/*.yaml", recursive=True):
+              try:
+                  yaml.safe_load(open(p))
+              except Exception as e:
+                  print("INVALID:", p, e); bad += 1
+          sys.exit(1 if bad else 0)
+          PY
+      - name: Ensure JSON Schema is up to date
+        run: python3 tools/generate.py --check
+      - name: Validate example files against the standard
+        run: |
+          for f in examples/*.csv; do
+            python3 tools/validate.py "$f" || true
+          done

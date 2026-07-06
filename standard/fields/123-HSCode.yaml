@@ -1,0 +1,9 @@
+name: HSCode
+label: HSCode
+position: 123
+tier: core
+owner: publisher
+type: Decimal
+required: 'no'
+length: 4,2
+description: HS Codes are a six digit code that is an internationally recognized standard.

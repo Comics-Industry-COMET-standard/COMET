@@ -1,0 +1,12 @@
+name: VolumeType
+source_columns:
+- VolumeType
+- Description
+count: 6
+values:
+- VolumeType: Book
+- VolumeType: Chapter
+- VolumeType: Part
+- VolumeType: Season
+- VolumeType: Volume
+- VolumeType: Year

@@ -1,0 +1,11 @@
+name: CartonQuantity
+label: CartonQuantity
+position: 73
+tier: core
+owner: publisher
+type: Number
+required: 'no'
+length: '6'
+description: |-
+  The CartonQuantity field displays the number of individual units contained in a single carton.
+example: '12'

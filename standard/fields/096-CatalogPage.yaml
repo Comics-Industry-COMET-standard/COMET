@@ -1,0 +1,11 @@
+name: CatalogPage
+label: CatalogPage
+position: 96
+tier: extended
+owner: distributor
+type: Number
+required: 'no'
+length: '4'
+description: |-
+  This field identifies the page number in the distributor catalogue on which an item’s solicitation information can be found.
+example: '14'

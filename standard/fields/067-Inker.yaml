@@ -1,0 +1,11 @@
+name: Inker
+label: Inker
+position: 67
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The Inker field identifies the primary creator responsible for inking the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.
+example: Bill Sienkiewicz

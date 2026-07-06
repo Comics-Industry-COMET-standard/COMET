@@ -1,0 +1,11 @@
+name: ImageUpdateDate
+label: ImageUpdateDate
+position: 107
+tier: extended
+owner: distributor
+type: Date
+required: 'no'
+length: '10'
+description: |-
+  The date the image was last updated. Expressed in YYYY-MM-DD. Example, 2021-05-01. Should be populated with the date the first time when the ImageURL has a value.
+example: '2021-05-01'

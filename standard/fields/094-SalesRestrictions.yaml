@@ -1,0 +1,13 @@
+name: SalesRestrictions
+label: SalesRestrictions
+position: 94
+tier: extended
+owner: distributor
+type: Pick List
+required: 'no'
+length: '2048'
+picklist: null
+description: |-
+  The SalesRestrictions field displays the geographic territories where the item may not be sold, in a comma separated list. See list of country codes (based on 2 character ISO 3166 country codes).
+example: CA, UK
+notes: Using the standard ISO 3166-1 Alpha-2 Codes

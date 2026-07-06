@@ -1,0 +1,11 @@
+name: UnitDepth
+label: Unit Depth
+position: 77
+tier: core
+owner: publisher
+type: Decimal
+required: 'yes'
+length: 10,4
+description: |-
+  The depth field displays the depth of the item in inches (Imperial), or cm (Metric), rounded to the fourth decimal place.
+example: '0.8'

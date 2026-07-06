@@ -1,0 +1,11 @@
+name: OrderFormNotes
+label: OrderFormNotes
+position: 95
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+length: '1024'
+description: |-
+  Order Form Notes are parenthetical descriptions, added below catalogue line items, offering additional ordering information on solicited merchandise.
+example: 50/50 Covers Distributed in Equal Ratio

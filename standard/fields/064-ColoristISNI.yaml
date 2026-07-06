@@ -1,0 +1,11 @@
+name: ColoristISNI
+label: ColoristISNI
+position: 64
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The ISNI number for the Colorist (if any), comma separated list of all colorists on the item, multiple creators should be separated by a semicolon, this field should be text.
+example: 0000 0003 9593 3286

@@ -1,0 +1,11 @@
+name: OrderRequirementCodes
+label: OrderRequirementCodes
+position: 50
+tier: core
+owner: publisher
+type: Composite
+required: 'no'
+length: '2048'
+description: |-
+  OrderRequirementCodes is a comma separated list containing barcodes that may be used in conjunction with ExceedPercentage or ratio variants. Ratio and non-ratio variants, by default count toward these thresholds unless listed in the OrderExceptionCodes.
+example: 72513032443605151, 72513032443605161

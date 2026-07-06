@@ -1,0 +1,13 @@
+name: MediaRating
+label: MediaRating
+position: 46
+tier: core
+owner: publisher
+type: Pick List
+required: 'yes'
+length: '32'
+picklist: MediaRating
+description: |-
+  The MediaRating field discloses the actual media rating value for the item. See MediaRating List of Values
+example: Rated T+
+notes: See the MediaRating table in the Data Definitions.

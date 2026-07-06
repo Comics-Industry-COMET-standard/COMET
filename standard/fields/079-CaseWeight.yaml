@@ -1,0 +1,11 @@
+name: CaseWeight
+label: Case Weight
+position: 79
+tier: extended
+owner: distributor
+type: Decimal
+required: 'no'
+length: 10,4
+description: |-
+  The weight of a case pounds (Imperial) or grams (Metric), rounded to the fourth decimal place.
+example: '8.1673'

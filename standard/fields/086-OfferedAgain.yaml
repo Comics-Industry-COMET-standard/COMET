@@ -1,0 +1,11 @@
+name: OfferedAgain
+label: OfferedAgain
+position: 86
+tier: extended
+owner: distributor
+type: Y/N
+required: 'no'
+length: '1'
+description: |-
+  Sometimes, items are solicited more than once in subsequent catalogues. This field denotes if an item is being Offered Again.
+example: N

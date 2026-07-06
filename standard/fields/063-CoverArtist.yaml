@@ -1,0 +1,11 @@
+name: CoverArtist
+label: CoverArtist
+position: 63
+tier: core
+owner: publisher
+type: Text
+required: for_comics
+length: '512'
+description: |-
+  The CoverArtist field identifies the primary creator responsible for illustrating the cover of the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.
+example: Marie Severin

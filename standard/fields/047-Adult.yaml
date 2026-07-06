@@ -1,0 +1,11 @@
+name: Adult
+label: Adult
+position: 47
+tier: core
+owner: publisher
+type: Y/N
+required: 'no'
+length: '1'
+description: |-
+  Adult (A) titles are intended for sale only to adult customers. This field identifies items which have explicit content intended for adults.
+example: Y

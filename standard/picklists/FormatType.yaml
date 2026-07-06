@@ -1,0 +1,151 @@
+name: FormatType
+source_columns:
+- FormatType
+- FormatType Description
+- Description
+count: 72
+values:
+- FormatType: BE
+  FormatType Description: Spiral Bound
+- FormatType: BF
+  FormatType Description: Pamphlet
+- FormatType: BI
+  FormatType Description: Rag Book
+- FormatType: BJ
+  FormatType Description: Bath Book
+- FormatType: BK
+  FormatType Description: Novelty Book
+- FormatType: BM
+  FormatType Description: Bookmark
+- FormatType: BR
+  FormatType Description: Board Book
+- FormatType: BX
+  FormatType Description: Boxed Set
+- FormatType: CA
+  FormatType Description: Calendar
+- FormatType: CB
+  FormatType Description: Comic Book
+- FormatType: CC
+  FormatType Description: Sheet map, flat
+- FormatType: CD
+  FormatType Description: Audio CD
+- FormatType: CG
+  FormatType Description: General Merchandise
+- FormatType: CL
+  FormatType Description: Coloring Book
+- FormatType: CO
+  FormatType Description: Comic Book Bundle
+- FormatType: CS
+  FormatType Description: Audio Cassette
+- FormatType: CT
+  FormatType Description: Catalog
+- FormatType: CV
+  FormatType Description: Cover
+- FormatType: DE
+  FormatType Description: Game Cartridge
+- FormatType: DG
+  FormatType Description: Digest Paperback
+- FormatType: DW
+  FormatType Description: Tableware
+- FormatType: FM
+  FormatType Description: Other apparel
+- FormatType: FZ
+  FormatType Description: Novelty Book
+- FormatType: GC
+  FormatType Description: Graphic Comic Box
+- FormatType: GN
+  FormatType Description: Graphic Novel
+- FormatType: HC
+  FormatType Description: Hardcover
+- FormatType: HS
+  FormatType Description: Hardcover Slip Cased
+- FormatType: JW
+  FormatType Description: Jewelry
+- FormatType: LB
+  FormatType Description: Tote bag
+- FormatType: LF
+  FormatType Description: Lift-the-Flap
+- FormatType: LG
+  FormatType Description: Lithograph
+- FormatType: MA
+  FormatType Description: Manga
+- FormatType: MF
+  FormatType Description: Sheet Map Folded
+- FormatType: MG
+  FormatType Description: Mixed Media
+- FormatType: MM
+  FormatType Description: Mass Market Paperback
+- FormatType: MU
+  FormatType Description: Manhua
+- FormatType: MW
+  FormatType Description: Manhwa
+- FormatType: MX
+  FormatType Description: Mass Max Paperback
+- FormatType: MZ
+  FormatType Description: Magazine
+- FormatType: 'NO'
+  FormatType Description: Novelty Item
+- FormatType: NT
+  FormatType Description: Non-Traditional
+- FormatType: OS
+  FormatType Description: Oversized
+- FormatType: PA
+  FormatType Description: Notebook
+- FormatType: PB
+  FormatType Description: Premium Comic Book
+- FormatType: PC
+  FormatType Description: Calendar
+- FormatType: PD
+  FormatType Description: Cards
+- FormatType: PF
+  FormatType Description: Diary
+- FormatType: PK
+  FormatType Description: Poster
+- FormatType: PO
+  FormatType Description: Postcard
+- FormatType: PR
+  FormatType Description: Mass Premium Paperback
+- FormatType: PS
+  FormatType Description: Poster
+- FormatType: PU
+  FormatType Description: Pop-up Book
+- FormatType: RS
+  FormatType Description: Retailer Sales Tool
+- FormatType: SC
+  FormatType Description: Slipcased Format
+- FormatType: SK
+  FormatType Description: Stickers
+- FormatType: SM
+  FormatType Description: Scented Book
+- FormatType: SO
+  FormatType Description: Slipcased Oversized
+- FormatType: ST
+  FormatType Description: Sticker Book
+- FormatType: TA
+  FormatType Description: Tattoos
+- FormatType: TC
+  FormatType Description: Trading Cards
+- FormatType: TF
+  FormatType Description: Touch & Feel
+- FormatType: TG
+  FormatType Description: Collectible Trading Card Games
+- FormatType: TM
+  FormatType Description: Traditional Manga (Left to Right)
+- FormatType: TR
+  FormatType Description: Trade Paperback
+- FormatType: VI
+  FormatType Description: Video
+- FormatType: WM
+  FormatType Description: Western Manga (Right to Left)
+- FormatType: WW
+  FormatType Description: Mixed Media
+- FormatType: XA
+  FormatType Description: Trade-only Material
+- FormatType: ZA
+  FormatType Description: General Merchandise
+- FormatType: ZC
+  FormatType Description: Soft Toy
+- FormatType: ZD
+  FormatType Description: Toy
+- FormatType: ZE
+  FormatType Description: Board Game

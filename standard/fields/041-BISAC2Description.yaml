@@ -1,0 +1,12 @@
+name: BISAC2Description
+label: BISAC2Description
+position: 41
+tier: core
+owner: publisher
+type: Pick List
+required: 'no'
+length: '128'
+picklist: null
+description: |-
+  The BISAC Description field provides the descriptive translation of the corresponding BISAC1 subject code.
+example: COMICS & GRAPHIC NOVELS / Crime & Mystery

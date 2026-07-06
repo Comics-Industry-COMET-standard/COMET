@@ -1,0 +1,11 @@
+name: Colorist
+label: Colorist
+position: 65
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The Colorist field identifies the primary creator responsible for coloring the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.
+example: Tatjana Wood

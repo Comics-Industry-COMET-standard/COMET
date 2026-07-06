@@ -1,0 +1,13 @@
+name: PrimaryContentType
+label: PrimaryContentType
+position: 36
+tier: core
+owner: publisher
+type: Pick List
+required: 'yes'
+length: '32'
+picklist: PrimaryContentType
+description: |-
+  PrimaryContentType defines something as primarily original content, or primarily reprinted content.
+example: Original Content
+notes: See PrimaryContentType table in the Data Definitions.

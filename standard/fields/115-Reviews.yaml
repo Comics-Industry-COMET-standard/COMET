@@ -1,0 +1,8 @@
+name: Reviews
+label: Reviews
+position: 115
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+description: Reviews or Pull Quotes for the item

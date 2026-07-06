@@ -1,0 +1,11 @@
+name: ReturnQualifier
+label: ReturnQualifier
+position: 103
+tier: extended
+owner: distributor
+type: Pick List
+required: 'no'
+length: '32'
+picklist: ReturnQualifier
+description: Open return, vs returns with qualifiers.
+example: Open

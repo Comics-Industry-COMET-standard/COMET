@@ -1,0 +1,10 @@
+name: TextNumber
+label: TextNumber
+position: 17
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '64'
+description: The TextNumber field (Red, Black, Omega, etc)
+example: Omega

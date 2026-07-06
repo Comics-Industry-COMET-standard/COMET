@@ -1,0 +1,12 @@
+name: CoverDescription
+label: CoverDescription
+position: 13
+tier: core
+owner: publisher
+type: Text
+required: for_variant_covers
+length: '256'
+description: |-
+  The CoverDescription field describes the cover differences between different editions. Should not contain the word "Cover".
+example: Artgerm Full Art
+notes: This is NOT for describing cover A or B, this is for describing a theme or artist.

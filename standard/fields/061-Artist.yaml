@@ -1,0 +1,11 @@
+name: Artist
+label: Artist
+position: 61
+tier: core
+owner: publisher
+type: Text
+required: for_comics
+length: '512'
+description: |-
+  The Arist field identifies the primary creator responsible for illustrating the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.
+example: Jack Kirby

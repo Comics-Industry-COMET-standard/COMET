@@ -1,0 +1,11 @@
+name: OriginalCatalogDate
+label: OriginalCatalogDate
+position: 23
+tier: extended
+owner: distributor
+type: Date
+required: 'no'
+length: '10'
+description: |-
+  The OriginalCatalogDate field corresponds to the date when the item was originally listed, expressed in YYYY-MM-DD. (for Offered again and Resolicited Items)
+example: '2021-01-26'

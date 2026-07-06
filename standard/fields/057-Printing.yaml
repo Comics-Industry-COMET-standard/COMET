@@ -1,0 +1,10 @@
+name: Printing
+label: Printing
+position: 57
+tier: core
+owner: publisher
+type: Number
+required: 'yes'
+length: '3'
+description: What printing is the item
+example: '2'

@@ -1,0 +1,48 @@
+name: Propose a new field
+description: Suggest a new field for the COMET Standard
+title: "[Field] "
+labels: ["proposal", "new-field"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping the standard grow. For significant additions, please
+        also attach a Change Proposal (see .github/CHANGE_PROPOSAL_TEMPLATE.md).
+  - type: input
+    id: field-name
+    attributes:
+      label: Proposed field name
+      placeholder: e.g. AudioEditionISBN
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Tier
+      options: [Essential (publisher), Core (publisher), Extended (distributor)]
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Field type
+      options: [Text, Number, Decimal, Date, Boolean, Pick List]
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What does this field capture, and why is it needed?
+    validations:
+      required: true
+  - type: input
+    id: example
+    attributes:
+      label: Example value
+  - type: dropdown
+    id: required
+    attributes:
+      label: Should it be required?
+      options: ["No (optional)", "Yes (always)", "Conditionally (comics/books/variants/kids)"]
+    validations:
+      required: true

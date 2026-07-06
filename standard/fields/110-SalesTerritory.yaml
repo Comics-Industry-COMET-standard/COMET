@@ -1,0 +1,8 @@
+name: SalesTerritory
+label: SalesTerritory
+position: 110
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+description: Positive list of territories an item is available in.

@@ -1,0 +1,11 @@
+name: PriceUSD
+label: PriceUSD
+position: 5
+tier: essential
+owner: publisher
+type: Decimal
+required: 'yes'
+length: '12'
+description: |-
+  The PriceUSD field includes the suggested retail price in US dollars that is printed on the product. Note that this field will not include a dollar sign ($).  Also known as the MSRP.
+example: '3.99'

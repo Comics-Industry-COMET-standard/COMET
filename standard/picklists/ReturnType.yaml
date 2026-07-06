@@ -1,0 +1,14 @@
+name: ReturnType
+source_columns:
+- ReturnType
+- Description
+count: 4
+values:
+- ReturnType: Affidavit
+  Description: Signed affidavit required to distributor
+- ReturnType: Full Copy Return
+  Description: Return item to distributor
+- ReturnType: LabelReturn
+  Description: Return item with specific label (see notes for more details)
+- ReturnType: Stripped Cover
+  Description: Strip cover and return to distributor

@@ -1,0 +1,13 @@
+name: Language
+label: Language
+position: 44
+tier: core
+owner: publisher
+type: Pick List
+required: 'yes'
+length: '3'
+picklist: LanguageCode
+description: |-
+  The Language field provides a 3-character code that provides information about the language of the item. See Language Codes
+example: eng
+notes: See the LanguageCodes table in the Data Definitions.

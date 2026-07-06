@@ -1,0 +1,12 @@
+name: VariantNumber
+label: VariantNumber
+position: 29
+tier: core
+owner: publisher
+type: Number
+required: 'yes'
+length: '6'
+description: |-
+  A numerical representation of the order in which a variant was added (i.e. the fourth added variant would have the number 4), should correspond with the last 2 or 3 digits of a UPC (depending on your ICP pattern) where possible.
+example: '2'
+notes: Expect retailers to convert this to a cover letter where 0 = CVR A, 1 = CVR B, etc.

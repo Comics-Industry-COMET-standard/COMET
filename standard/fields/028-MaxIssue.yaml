@@ -1,0 +1,13 @@
+name: MaxIssue
+label: MaxIssue
+position: 28
+tier: core
+owner: publisher
+type: Number
+required: 'no'
+length: '12'
+description: |-
+  The Max Issue information refers to the highest number (last issue) in a limited series. For example, in Umbrella Academy: Apocalypse Suite #4 (of 6), the Max Issue data [(of 6)] identifies the title as a six-issue limited series.
+example: '6'
+notes: |-
+  This is an extremely helpful sales tool at the register. "Do you want to subscribe? It's only 6 issues"

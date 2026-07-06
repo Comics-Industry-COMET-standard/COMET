@@ -1,0 +1,10 @@
+name: MonthCode
+label: MonthCode
+position: 84
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+length: '10'
+description: The ID of the item for a specific catalogue month (traditionally MMMYY#### format)
+example: SEP081984

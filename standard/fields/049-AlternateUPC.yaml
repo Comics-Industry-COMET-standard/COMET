@@ -1,0 +1,11 @@
+name: AlternateUPC
+label: AlternateUPC
+position: 49
+tier: core
+owner: publisher
+type: Number
+required: 'no'
+length: '17'
+description: |-
+  In the case a title has more variant covers than can be accounted for with the item's base barcode, this alternate UPC code would indicate the other barcodes used to qualify for a ratioed variant.
+example: '70985301898'

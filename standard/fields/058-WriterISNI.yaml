@@ -1,0 +1,11 @@
+name: WriterISNI
+label: WriterISNI
+position: 58
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The ISNI number for the Writer, comma separated list of all writers on the item, multiple creators should be separated by a semicolon, this field should be text.
+example: 0000 0001 2146 227X

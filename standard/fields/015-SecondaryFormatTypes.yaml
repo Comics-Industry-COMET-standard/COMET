@@ -1,0 +1,13 @@
+name: SecondaryFormatTypes
+label: SecondaryFormatTypes
+position: 15
+tier: core
+owner: publisher
+type: Pick List
+required: 'no'
+length: '64'
+picklist: FormatType
+description: |-
+  SecondaryFormatTypes further defines format types. For example, Hardcover > Omnibus (See FormatTypes in the data definitions). This field is a comma-separated list of format codes.
+example: BX,LF
+notes: See the FormatType table in the Data Definitions.

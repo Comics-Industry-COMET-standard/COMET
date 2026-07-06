@@ -1,0 +1,24 @@
+name: MediaRating
+source_columns:
+- Media Rating
+- Description
+count: 8
+values:
+- Media Rating: Explicit Content
+  Description: Appropriate for readers age 18 and older only.
+- Media Rating: Mature
+  Description: Appropriate for readers age 17 and older.May contain intense violence, extensive profanity, nudity, sexual
+    themes and other content suitable only for older readers.
+- Media Rating: Parental Advisory SLC
+  Description: Same as Parental Advisory, but contains Strong Language Content.
+- Media Rating: Rated T+
+  Description: Appropriate for readers age 15 and older. May contain moderate violence, mild profanity, graphic imagery and/or
+    suggestive themes.
+- Media Rating: Rated T
+  Description: Appropriate for readers age 12 and older. May contain mild violence, language and/or suggestive themes.
+- Media Rating: All Ages
+  Description: Standards Conversation
+- Media Rating: No Rating
+  Description: No media rating for this item.
+- Media Rating: '[null/blank]'
+  Description: No media rating for this item.

@@ -1,0 +1,10 @@
+name: DTCStreetDate
+label: DTCStreetDate
+position: 126
+tier: core
+owner: publisher
+type: Date
+required: 'no'
+length: '10'
+description: |-
+  The date a direct to consumer publisher may offer this item on sale, expressed in YYYY-MM-DD. Example 2023-10-13

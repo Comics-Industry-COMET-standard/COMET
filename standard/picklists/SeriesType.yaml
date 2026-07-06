@@ -1,0 +1,14 @@
+name: SeriesType
+source_columns:
+- SeriesType
+- Description
+count: 4
+values:
+- SeriesType: One-Shot
+  Description: A one-off item, is not connected to another series.
+- SeriesType: Ongoing
+  Description: Regular, ongoing series that comes out on a regular basis.
+- SeriesType: Limited Series
+  Description: A finite number of these issues will be made.
+- SeriesType: Annual
+  Description: A once per year title.

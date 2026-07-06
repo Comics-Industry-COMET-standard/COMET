@@ -1,0 +1,11 @@
+name: PriceCAD
+label: PriceCAD
+position: 6
+tier: core
+owner: publisher
+type: Decimal
+required: 'no'
+length: 8,2
+description: |-
+  The PriceCAD field includes the suggested retail price  in Canadian dollars. Note that this field will not include a dollar sign ($).
+example: '9.99'

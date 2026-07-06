@@ -1,0 +1,11 @@
+name: CaseHeight
+label: Case Height
+position: 82
+tier: extended
+owner: distributor
+type: Decimal
+required: 'no'
+length: 10,4
+description: |-
+  The height of the case inches (Imperial), or cm (Metric), rounded to the fourth decimal place.
+example: '5.24'

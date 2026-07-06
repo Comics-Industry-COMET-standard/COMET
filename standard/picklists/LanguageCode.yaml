@@ -1,0 +1,94 @@
+name: LanguageCode
+source_columns:
+- LanguageCode
+- Value
+count: 44
+values:
+- LanguageCode: ang
+  Value: Old English
+- LanguageCode: ara
+  Value: Arabic
+- LanguageCode: arc
+  Value: Imperial Aramaic (700-300 BCE)
+- LanguageCode: baq
+  Value: Basque
+- LanguageCode: ben
+  Value: Bengali
+- LanguageCode: cat
+  Value: Catalan
+- LanguageCode: chi
+  Value: Chinese
+- LanguageCode: chr
+  Value: Cherokee
+- LanguageCode: cze
+  Value: Czech
+- LanguageCode: dan
+  Value: Danish
+- LanguageCode: dum
+  Value: Dutch; Middle
+- LanguageCode: dut
+  Value: Dutch; Flemish
+- LanguageCode: eng
+  Value: English
+- LanguageCode: est
+  Value: Estonian
+- LanguageCode: fre
+  Value: French
+- LanguageCode: ger
+  Value: German
+- LanguageCode: gle
+  Value: Irish
+- LanguageCode: grc
+  Value: Ancient Greek
+- LanguageCode: gre
+  Value: Greek, Modern (1453-)
+- LanguageCode: heb
+  Value: Hebrew
+- LanguageCode: hin
+  Value: Hindi
+- LanguageCode: hrv
+  Value: Croatian
+- LanguageCode: hun
+  Value: Hungarian
+- LanguageCode: ind
+  Value: Indonesian
+- LanguageCode: ita
+  Value: Italian
+- LanguageCode: jpn
+  Value: Japanese
+- LanguageCode: kor
+  Value: Korean
+- LanguageCode: lat
+  Value: Latin
+- LanguageCode: lat
+  Value: American Spanish
+- LanguageCode: mul
+  Value: Multiple
+- LanguageCode: nor
+  Value: Norwegian
+- LanguageCode: per
+  Value: Persian (Farsi)
+- LanguageCode: pol
+  Value: Polish
+- LanguageCode: por
+  Value: Portuguese
+- LanguageCode: qls
+  Value: Neutral
+- LanguageCode: rus
+  Value: Russian
+- LanguageCode: sam
+  Value: Samaritan Aramaic
+- LanguageCode: san
+  Value: Sanskrit
+- LanguageCode: slv
+  Value: Slovenian
+- LanguageCode: spa
+  Value: Spanish
+- LanguageCode: swe
+  Value: Swedish
+- LanguageCode: tam
+  Value: Tamil
+- LanguageCode: tur
+  Value: Turkish
+- LanguageCode: yid
+  Value: Yiddish

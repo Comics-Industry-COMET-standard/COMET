@@ -1,0 +1,216 @@
+name: BISACCode
+source_columns:
+- BISACCode
+- Value
+count: 105
+values:
+- BISACCode: ART004000
+  Value: ART / Techniques / Cartooning
+- BISACCode: CGN000000
+  Value: COMICS & GRAPHIC NOVELS / General
+- BISACCode: CGN001000
+  Value: COMICS & GRAPHIC NOVELS / Anthologies
+- BISACCode: CGN004010
+  Value: COMICS & GRAPHIC NOVELS / Crime & Mystery
+- BISACCode: CGN004020
+  Value: COMICS & GRAPHIC NOVELS / Erotica
+- BISACCode: CGN004030
+  Value: COMICS & GRAPHIC NOVELS / Fantasy
+- BISACCode: CGN004040
+  Value: COMICS & GRAPHIC NOVELS / Horror
+- BISACCode: CGN004050
+  Value: COMICS & GRAPHIC NOVELS / Manga / General
+- BISACCode: CGN004060
+  Value: COMICS & GRAPHIC NOVELS / Media Tie-In
+- BISACCode: CGN004070
+  Value: COMICS & GRAPHIC NOVELS / Science Fiction
+- BISACCode: CGN004080
+  Value: COMICS & GRAPHIC NOVELS / Superheroes
+- BISACCode: CGN004090
+  Value: COMICS & GRAPHIC NOVELS / Romance
+- BISACCode: CGN004100
+  Value: COMICS & GRAPHIC NOVELS / Manga / Crime & Mystery
+- BISACCode: CGN004110
+  Value: COMICS & GRAPHIC NOVELS / Manga / Erotica & Hentai
+- BISACCode: CGN004120
+  Value: COMICS & GRAPHIC NOVELS / Manga / Fantasy
+- BISACCode: CGN004130
+  Value: COMICS & GRAPHIC NOVELS / Manga / LGBTQ+
+- BISACCode: CGN004140
+  Value: COMICS & GRAPHIC NOVELS / Manga / Historical Fiction
+- BISACCode: CGN004150
+  Value: COMICS & GRAPHIC NOVELS / Manga / Horror
+- BISACCode: CGN004160
+  Value: COMICS & GRAPHIC NOVELS / Manga / Media Tie-In
+- BISACCode: CGN004170
+  Value: COMICS & GRAPHIC NOVELS / Manga / Nonfiction
+- BISACCode: CGN004180
+  Value: COMICS & GRAPHIC NOVELS / Manga / Romance
+- BISACCode: CGN004190
+  Value: COMICS & GRAPHIC NOVELS / Manga / Science Fiction
+- BISACCode: CGN004200
+  Value: COMICS & GRAPHIC NOVELS / Manga / Sports
+- BISACCode: CGN004210
+  Value: COMICS & GRAPHIC NOVELS / Manga / Yaoi
+- BISACCode: CGN004230
+  Value: COMICS & GRAPHIC NOVELS / Manga / Dystopian
+- BISACCode: CGN004240
+  Value: COMICS & GRAPHIC NOVELS / Manga / Action & Adventure
+- BISACCode: CGN004250
+  Value: COMICS & GRAPHIC NOVELS / Manga / Humorous
+- BISACCode: CGN004260
+  Value: COMICS & GRAPHIC NOVELS / Manga / Magical Girl
+- BISACCode: CGN004270
+  Value: COMICS & GRAPHIC NOVELS / Manga / Mecha
+- BISACCode: CGN004280
+  Value: COMICS & GRAPHIC NOVELS / Manga / School Life
+- BISACCode: CGN004290
+  Value: COMICS & GRAPHIC NOVELS / Manga / Supernatural
+- BISACCode: CGN004300
+  Value: COMICS & GRAPHIC NOVELS / Manga / Isekai
+- BISACCode: CGN004310
+  Value: COMICS & GRAPHIC NOVELS / Manga / Yuri
+- BISACCode: CGN004320
+  Value: COMICS & GRAPHIC NOVELS / Manga / Light Novel
+- BISACCode: CGN004330
+  Value: COMICS & GRAPHIC NOVELS / Manga / Food *
+- BISACCode: CGN006000
+  Value: COMICS & GRAPHIC NOVELS / Literary
+- BISACCode: CGN007000
+  Value: COMICS & GRAPHIC NOVELS / Nonfiction / General
+- BISACCode: CGN007010
+  Value: COMICS & GRAPHIC NOVELS / Nonfiction / Biography & Memoir
+- BISACCode: CGN007020
+  Value: COMICS & GRAPHIC NOVELS / Nonfiction / History
+- BISACCode: CGN007030
+  Value: COMICS & GRAPHIC NOVELS / Nonfiction / Journalism *
+- BISACCode: CGN007040
+  Value: COMICS & GRAPHIC NOVELS / Nonfiction / Science & Nature *
+- BISACCode: CGN008000
+  Value: COMICS & GRAPHIC NOVELS / Contemporary Women
+- BISACCode: CGN009000
+  Value: COMICS & GRAPHIC NOVELS / LGBTQ+
+- BISACCode: CGN010000
+  Value: COMICS & GRAPHIC NOVELS / Historical Fiction
+- BISACCode: CGN011000
+  Value: COMICS & GRAPHIC NOVELS / Religious
+- BISACCode: CGN012000
+  Value: COMICS & GRAPHIC NOVELS / Adaptations
+- BISACCode: CGN013000
+  Value: COMICS & GRAPHIC NOVELS / Dystopian
+- BISACCode: CGN014000
+  Value: COMICS & GRAPHIC NOVELS / Humorous
+- BISACCode: CGN015000
+  Value: COMICS & GRAPHIC NOVELS / Reference
+- BISACCode: CGN016000
+  Value: COMICS & GRAPHIC NOVELS / Occult & Supernatural
+- BISACCode: CGN017000
+  Value: COMICS & GRAPHIC NOVELS / Supervillains
+- BISACCode: CGN018000
+  Value: COMICS & GRAPHIC NOVELS / Action & Adventure *
+- BISACCode: CGN019000
+  Value: COMICS & GRAPHIC NOVELS / Fairy Tales, Folk Tales, Legends & Mythology *
+- BISACCode: CGN020000
+  Value: COMICS & GRAPHIC NOVELS / International *
+- BISACCode: CGN021000
+  Value: COMICS & GRAPHIC NOVELS / Manhwa *
+- BISACCode: HUM001000
+  Value: HUMOR / Form / Comic Strips & Cartoons
+- BISACCode: JNF062000
+  Value: JUVENILE NONFICTION / Comics & Graphic Novels / General
+- BISACCode: JNF062010
+  Value: JUVENILE NONFICTION / Comics & Graphic Novels / Biography & Memoir
+- BISACCode: JNF062020
+  Value: JUVENILE NONFICTION / Comics & Graphic Novels / History
+- BISACCode: JNF062030
+  Value: JUVENILE NONFICTION / Comics & Graphic Novels / Science & Nature
+- BISACCode: JNF062040
+  Value: JUVENILE NONFICTION / Comics & Graphic Novels / Social Topics
+- BISACCode: JUV008000
+  Value: JUVENILE FICTION / Comics & Graphic Novels / General
+- BISACCode: JUV008010
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Manga
+- BISACCode: JUV008020
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Superheroes
+- BISACCode: JUV008030
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Media Tie-In
+- BISACCode: JUV008040
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Action & Adventure
+- BISACCode: JUV008050
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Animals
+- BISACCode: JUV008060
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Classic Adaptation
+- BISACCode: JUV008070
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Fairy Tales, Folklore, Legends & Mythology
+- BISACCode: JUV008080
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Fantasy
+- BISACCode: JUV008090
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Historical
+- BISACCode: JUV008100
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Horror
+- BISACCode: JUV008110
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Humorous
+- BISACCode: JUV008120
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Mystery & Detective
+- BISACCode: JUV008130
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Paranormal
+- BISACCode: JUV008140
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Science Fiction
+- BISACCode: JUV008150
+  Value: JUVENILE FICTION / Comics & Graphic Novels / African American & Black *
+- BISACCode: JUV008160
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Indigenous Peoples of Turtle Island *
+- BISACCode: JUV008170
+  Value: JUVENILE FICTION / Comics & Graphic Novels / Native American *
+- BISACCode: JUV008180
+  Value: JUVENILE FICTION / Comics & Graphic Novels / LGBTQ+ *
+- BISACCode: YAF010000
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / General
+- BISACCode: YAF010010
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Manga
+- BISACCode: YAF010020
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Media Tie-In
+- BISACCode: YAF010030
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Science Fiction
+- BISACCode: YAF010040
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Superheroes
+- BISACCode: YAF010050
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Action & Adventure
+- BISACCode: YAF010060
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Classic Adaptation
+- BISACCode: YAF010070
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Coming of Age
+- BISACCode: YAF010080
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Dystopian
+- BISACCode: YAF010090
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Fairy Tales, Folklore, Legends & Mythology
+- BISACCode: YAF010100
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Fantasy
+- BISACCode: YAF010110
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Historical
+- BISACCode: YAF010120
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Horror
+- BISACCode: YAF010130
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Humorous
+- BISACCode: YAF010140
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / LGBTQ+
+- BISACCode: YAF010150
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Mystery & Detective
+- BISACCode: YAF010160
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Paranormal
+- BISACCode: YAF010170
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Romance
+- BISACCode: YAF010180
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Diversity & Multicultural
+- BISACCode: YAF035000
+  Value: YOUNG ADULT FICTION / Comics & Graphic Novels / Light Novel
+- BISACCode: YAN012000
+  Value: YOUNG ADULT NONFICTION / Comics & Graphic Novels / General
+- BISACCode: YAN012010
+  Value: YOUNG ADULT NONFICTION / Comics & Graphic Novels / Biography
+- BISACCode: YAN012020
+  Value: YOUNG ADULT NONFICTION / Comics & Graphic Novels / History
+- BISACCode: YAN012030
+  Value: YOUNG ADULT NONFICTION / Comics & Graphic Novels / Science & Nature
+- BISACCode: YAN012040
+  Value: YOUNG ADULT NONFICTION / Comics & Graphic Novels / Social Topics

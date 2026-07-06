@@ -1,0 +1,9 @@
+name: NETPriceCA
+label: NETPriceCA
+position: 117
+tier: extended
+owner: distributor
+type: Decimal
+required: 'no'
+length: 10,2
+description: NET Price in CAD

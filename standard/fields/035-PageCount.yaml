@@ -1,0 +1,10 @@
+name: PageCount
+label: PageCount
+position: 35
+tier: core
+owner: publisher
+type: Number
+required: 'yes'
+length: '6'
+description: The PageCount field displays the page count of the publication.
+example: '64'

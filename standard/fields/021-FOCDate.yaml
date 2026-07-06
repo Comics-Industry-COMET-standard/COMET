@@ -1,0 +1,11 @@
+name: FOCDate
+label: FOCDate
+position: 21
+tier: extended
+owner: distributor
+type: Date
+required: 'no'
+length: '10'
+description: |-
+  The FOCDate field provides the Final Order Cutoff date for the item, expressed in YYYY-MM-DD. Example 2023-10-13 (may be different than publisher FOC)
+example: '2021-03-26'

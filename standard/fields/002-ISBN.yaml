@@ -1,0 +1,11 @@
+name: ISBN
+label: ISBN
+position: 2
+tier: essential
+owner: publisher
+type: Number
+required: for_books
+length: '13'
+description: |-
+  The ISBN field provides the 13-digit International Standard Book Number for all items which carry an ISBN.
+example: '9781302920494'

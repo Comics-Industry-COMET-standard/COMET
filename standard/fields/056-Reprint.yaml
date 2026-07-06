@@ -1,0 +1,12 @@
+name: Reprint
+label: Reprint
+position: 56
+tier: core
+owner: publisher
+type: Y/N
+required: for_comics
+length: '1'
+description: |-
+  Is the item a Reprint? Facsimile editions - Image Firsts, something that has come out previously.
+example: N
+notes: A simple yes or no flag to indicate whether a periodical is a first print or not.

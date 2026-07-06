@@ -1,0 +1,10 @@
+name: NETPriced
+label: NETPriced
+position: 9
+tier: extended
+owner: distributor
+type: Y/N
+required: 'no'
+length: '1'
+description: Indicates a product is NET priced
+example: N

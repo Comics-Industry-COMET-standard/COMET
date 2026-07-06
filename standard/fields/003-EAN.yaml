@@ -1,0 +1,14 @@
+name: EAN
+label: EAN
+position: 3
+tier: essential
+owner: publisher
+type: Number
+required: for_books
+length: '18'
+description: |-
+  The EAN is 13-digit International Standard Book Number + the additional 5 characters in price.
+example: '978130292049451499'
+notes: |-
+  Each new printing with a price change will have a different 18 digit EAN.
+  Multiple EAN's may share the same ISBN (13 digit number).

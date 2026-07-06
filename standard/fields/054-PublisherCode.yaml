@@ -1,0 +1,10 @@
+name: PublisherCode
+label: PublisherCode
+position: 54
+tier: core
+owner: publisher
+type: Text
+required: 'yes'
+length: '5'
+description: Numerical representation of the 5 digit "Manufacturer Code" used to designate a UPC code
+example: '59606'

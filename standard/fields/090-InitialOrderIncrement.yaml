@@ -1,0 +1,12 @@
+name: InitialOrderIncrement
+label: InitialOrderIncrement
+position: 90
+tier: extended
+owner: distributor
+type: Number
+required: 'no'
+length: '10'
+description: Minimum quantity required to order, similar to a case quantity.
+example: '12'
+notes: |-
+  This field serves a different purpose than the pre-existing Diamond field named OrderIncrement.

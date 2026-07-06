@@ -1,0 +1,8 @@
+name: ComparableTitles
+label: ComparableTitles
+position: 116
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+description: Other "Similar" titles, as a comma separated UPC/ISBN list.

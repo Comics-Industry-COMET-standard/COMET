@@ -1,0 +1,24 @@
+name: SeriesFrequency
+source_columns:
+- SeriesFrequency
+- Description
+count: 9
+values:
+- SeriesFrequency: Once
+  Description: A one-shot, or one-off product
+- SeriesFrequency: Weekly
+  Description: Every week.
+- SeriesFrequency: Bi-Weekly
+  Description: Every two weeks.
+- SeriesFrequency: Twice-Monthly
+  Description: Two times per month.
+- SeriesFrequency: Monthly
+  Description: Once per month.
+- SeriesFrequency: Bi-Monthly
+  Description: Every two months.
+- SeriesFrequency: Quarterly
+  Description: Every three months (4 times a year)
+- SeriesFrequency: Annual
+  Description: Once per year.
+- SeriesFrequency: Irregular
+  Description: Occasional, no firm date set, but more than one.

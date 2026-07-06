@@ -1,0 +1,11 @@
+name: Storyline
+label: Storyline
+position: 26
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '256'
+description: |-
+  A group of issues that tie together into one storyline, these may cross series codes, or be contained within one series code.
+example: Fall of the House of X

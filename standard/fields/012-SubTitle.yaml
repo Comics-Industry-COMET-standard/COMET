@@ -1,0 +1,11 @@
+name: SubTitle
+label: SubTitle
+position: 12
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '256'
+description: |-
+  The Subtitle field is a secondary or explanatory title, often printed on the cover of an item.
+example: Fall of the House of Slaughter

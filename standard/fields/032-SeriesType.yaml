@@ -1,0 +1,11 @@
+name: SeriesType
+label: SeriesType
+position: 32
+tier: core
+owner: publisher
+type: Pick List
+required: for_comics
+length: '32'
+picklist: SeriesType
+description: What type of a comic is this, for example a one-shot vs ongoing vs limited series?
+example: Limited Series

@@ -1,0 +1,16 @@
+name: PrimaryContentType
+source_columns:
+- PrimaryContentType
+- Description
+count: 5
+values:
+- PrimaryContentType: Original Content
+  Description: Contains entirely original content.
+- PrimaryContentType: Collected Content
+  Description: Contains entirely reprinted content.
+- PrimaryContentType: Digital First Printing
+  Description: Contains primarily content that was previously presented on digital platforms.
+- PrimaryContentType: Primarily Original Content
+  Description: Contains primarily original content.
+- PrimaryContentType: Primarily Reprinted Content
+  Description: Contains primarily reprinted content.

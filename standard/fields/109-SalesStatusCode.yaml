@@ -1,0 +1,11 @@
+name: SalesStatusCode
+label: SalesStatusCode
+position: 109
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+length: '2'
+description: |-
+  A two digit code that indicates the status of a product. (See Sales Status Codes in Data Definitions)
+example: IP

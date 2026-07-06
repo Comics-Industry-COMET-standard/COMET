@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Personal, machine-local Claude Code settings (not for the shared repo)
+.claude/settings.local.json

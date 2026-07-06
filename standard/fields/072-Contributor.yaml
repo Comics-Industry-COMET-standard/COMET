@@ -1,0 +1,11 @@
+name: Contributor
+label: Contributor
+position: 72
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '16'
+description: |-
+  The Contributor field identifies the any other primary creator responsible for some other contribution to the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.
+example: Ken Albery; Erik Larsen

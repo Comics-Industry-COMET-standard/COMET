@@ -1,0 +1,11 @@
+name: EligibleCodes
+label: EligibleCodes
+position: 53
+tier: core
+owner: publisher
+type: Composite
+required: 'no'
+length: '2048'
+description: |-
+  The EligibleCodes field is a numeric field of barcodes that should be used in conjunction with ExceedPercentage. Barcodes in this field will be used to determine the total quantity of all items of a specific title that must meet or exceed the quantity calculated by ExceedPercentage
+example: 75960620483001121, 75960620483001111

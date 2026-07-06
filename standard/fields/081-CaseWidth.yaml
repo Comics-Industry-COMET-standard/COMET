@@ -1,0 +1,11 @@
+name: CaseWidth
+label: Case Width
+position: 81
+tier: extended
+owner: distributor
+type: Decimal
+required: 'no'
+length: 10,4
+description: |-
+  The width of a case inches (Imperial), or cm (Metric), rounded to the fourth decimal place.
+example: '36.616'

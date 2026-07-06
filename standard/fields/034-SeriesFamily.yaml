@@ -1,0 +1,11 @@
+name: SeriesFamily
+label: SeriesFamily
+position: 34
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '128'
+description: |-
+  SeriesFamily represents a family of titles (All Spider-Man, All Batman, All X-Men, All Titans)
+example: Batman

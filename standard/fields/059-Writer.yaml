@@ -1,0 +1,11 @@
+name: Writer
+label: Writer
+position: 59
+tier: core
+owner: publisher
+type: Text
+required: 'yes'
+length: '512'
+description: |-
+  The Writer field identifies the primary creator responsible for authoring/writing the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.
+example: Neil Gaiman

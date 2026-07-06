@@ -1,0 +1,13 @@
+name: ProductCategory
+label: ProductCategory
+position: 16
+tier: essential
+owner: publisher
+type: Pick List
+required: 'yes'
+length: '24'
+picklist: ProductCategories
+description: |-
+  The ProductCategory is the categorization that the product falls under for taxation purposes.
+example: Comics
+notes: See Categorization table

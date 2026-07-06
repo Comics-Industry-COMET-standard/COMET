@@ -1,0 +1,11 @@
+name: ReturnType
+label: ReturnType
+position: 102
+tier: extended
+owner: distributor
+type: Pick List
+required: 'no'
+length: '32'
+picklist: ReturnType
+description: The type of returnability (affidavit, stripped cover, return to publisher, etc)
+example: Affidavit

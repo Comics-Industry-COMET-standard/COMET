@@ -1,0 +1,64 @@
+name: Docs site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'standard/**'
+      - 'docs/**'
+      - 'CHANGELOG.md'
+      - '.github/workflows/docs.yml'
+  # Allow manual runs from the Actions tab.
+  workflow_dispatch:
+
+# Least-privilege by default; the deploy job elevates what it needs.
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Build on every PR and push. This is the gate: a broken internal link or a
+  # generator failure fails the build (onBrokenLinks: 'throw').
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Build site (runs the YAML→MDX generator via prebuild)
+        run: npm run build
+      - name: Upload Pages artifact
+        # Only needed for the deploy job on main.
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/build
+
+  # Deploy to GitHub Pages only on push to main.
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

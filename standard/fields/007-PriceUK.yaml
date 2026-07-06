@@ -1,0 +1,11 @@
+name: PriceUK
+label: PriceUK
+position: 7
+tier: core
+owner: publisher
+type: Decimal
+required: 'no'
+length: 8,2
+description: |-
+  The PriceUK field includes the suggested retail price in British Pound Sterling. Note that this field will not include a currency symbol.
+example: '5.99'

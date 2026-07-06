@@ -1,0 +1,10 @@
+name: UnitMeasurements
+label: UnitMeasurements
+position: 74
+tier: core
+owner: publisher
+type: Text
+required: 'yes'
+length: '8'
+description: Imperial or Metric
+example: Imperial

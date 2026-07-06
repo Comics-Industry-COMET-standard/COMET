@@ -1,0 +1,12 @@
+name: ExceedPercentage
+label: ExceedPercentage
+position: 52
+tier: core
+owner: publisher
+type: Number
+required: 'no'
+length: '4'
+description: X% of the item identified in the OrderRequirementCodes field.
+example: '10'
+notes: |-
+  In this example, you need to order 10% of the listed UPC's in order to qualify for 1 of these.  So if you ordered 90 of the other UPC's, you could order 9 of this item.

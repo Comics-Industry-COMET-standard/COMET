@@ -1,0 +1,10 @@
+name: TitleFamilyID
+label: TitleFamilyID
+position: 122
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '10'
+description: |-
+  An ID to provide a linking between all formats and variants of a given title, comic, tpb, graphic novel, hardcover, deluxe hardcover, etc.

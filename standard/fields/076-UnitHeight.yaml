@@ -1,0 +1,11 @@
+name: UnitHeight
+label: Unit Height
+position: 76
+tier: core
+owner: publisher
+type: Decimal
+required: 'yes'
+length: 10,4
+description: |-
+  The Height field displays the  height of the item in inches (Imperial), or cm (Metric), rounded to the fourth decimal place.
+example: '12.3616'

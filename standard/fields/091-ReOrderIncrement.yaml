@@ -1,0 +1,10 @@
+name: ReOrderIncrement
+label: ReOrderIncrement
+position: 91
+tier: extended
+owner: distributor
+type: Number
+required: 'no'
+length: '10'
+description: Minimum quantity required to re-order, similar to a case quantity.
+example: '6'

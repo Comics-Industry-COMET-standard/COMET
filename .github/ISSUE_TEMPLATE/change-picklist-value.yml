@@ -1,0 +1,41 @@
+name: Change a picklist value
+description: Add, rename, or clarify a controlled-vocabulary entry
+title: "[Picklist] "
+labels: ["proposal", "picklist"]
+body:
+  - type: dropdown
+    id: picklist
+    attributes:
+      label: Which picklist?
+      options:
+        - AgeRange
+        - BISACCode
+        - FormatType
+        - LanguageCode
+        - MediaRating
+        - ProductCategories
+        - PrimaryContentType
+        - ReturnQualifier
+        - ReturnType
+        - SalesStatusCode
+        - SeriesFrequency
+        - SeriesType
+        - VariantType
+        - VolumeType
+        - HTSCountryCode
+    validations:
+      required: true
+  - type: dropdown
+    id: action
+    attributes:
+      label: What kind of change?
+      options: [Add a value, Rename a value, Clarify a description, Remove a value]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: The value(s) affected and the reasoning.
+    validations:
+      required: true

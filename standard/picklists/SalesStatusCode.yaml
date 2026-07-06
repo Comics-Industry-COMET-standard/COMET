@@ -1,0 +1,20 @@
+name: SalesStatusCode
+source_columns:
+- Sales Status Code
+- Sales Status
+count: 7
+values:
+- Sales Status Code: IP
+  Sales Status: Active
+- Sales Status Code: CA
+  Sales Status: Cancelled
+- Sales Status Code: OP
+  Sales Status: Out of Print
+- Sales Status Code: OS
+  Sales Status: Inactive
+- Sales Status Code: PP
+  Sales Status: Postponed
+- Sales Status Code: RM
+  Sales Status: Remaindered
+- Sales Status Code: XD
+  Sales Status: Not Our Product

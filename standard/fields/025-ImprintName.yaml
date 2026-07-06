@@ -1,0 +1,11 @@
+name: ImprintName
+label: ImprintName
+position: 25
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '256'
+description: |-
+  The ImprintName field displays the name of the imprint or brand that is publishing the item. Example: DC Universe versus Black Label, Skybound for Image Comics
+example: Skybound

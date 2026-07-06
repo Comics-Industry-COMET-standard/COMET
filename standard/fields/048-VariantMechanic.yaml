@@ -1,0 +1,12 @@
+name: VariantMechanic
+label: VariantMechanic
+position: 48
+tier: core
+owner: publisher
+type: Pick List
+required: 'no'
+length: '36'
+picklist: null
+description: If this is not an open order variant, the constraint type for ordering is described here.
+example: Ratio Variant
+notes: See Variant Mechanics table in Data Definitions

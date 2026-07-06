@@ -1,0 +1,9 @@
+name: NETPriceUK
+label: NETPriceUK
+position: 119
+tier: extended
+owner: distributor
+type: Decimal
+required: 'no'
+length: 10,2
+description: NET Price in UK

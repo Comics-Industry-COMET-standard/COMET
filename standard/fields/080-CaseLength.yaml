@@ -1,0 +1,11 @@
+name: CaseLength
+label: Case Length
+position: 80
+tier: extended
+owner: distributor
+type: Decimal
+required: 'no'
+length: 10,4
+description: |-
+  The length of a case inches (Imperial), or cm (Metric), rounded to the fourth decimal place.
+example: '14.25'

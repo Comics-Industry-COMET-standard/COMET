@@ -1,0 +1,10 @@
+name: AlternateCode
+label: AlternateCode
+position: 85
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+length: '36'
+description: Any alternate codes for other distribution arms.
+example: SBAPR0550

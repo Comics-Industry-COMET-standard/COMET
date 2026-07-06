@@ -1,0 +1,49 @@
+name: ProductCategories
+source_columns:
+- ID
+- ProductCategory
+- HSCode
+count: 14
+values:
+- ID: '1'
+  ProductCategory: Comics
+  HSCode: '4901.99'
+- ID: '2'
+  ProductCategory: Magazines
+  HSCode: '4902.90'
+- ID: '3'
+  ProductCategory: Graphic Novels
+  HSCode: '4901.99'
+- ID: '4'
+  ProductCategory: Books
+  HSCode: '4901.00'
+- ID: '5'
+  ProductCategory: Games
+  HSCode: '9504.90'
+- ID: '6'
+  ProductCategory: Cards
+  HSCode: '4911.99'
+- ID: '7'
+  ProductCategory: Novelties
+  HSCode: '9505.90'
+- ID: '9'
+  ProductCategory: Apparel
+  HSCode: '6109.90'
+- ID: '10'
+  ProductCategory: Toys
+  HSCode: '9503.00'
+- ID: '12'
+  ProductCategory: Supplies
+  HSCode: '4819.50'
+- ID: '13'
+  ProductCategory: Sales Tools
+  HSCode: '4911.10'
+- ID: '16'
+  ProductCategory: AV Media
+  HSCode: '8523.49'
+- ID: '17'
+  ProductCategory: Food
+  HSCode: '1704.90'
+- ID: '18'
+  ProductCategory: Calendars
+  HSCode: '4910.00'

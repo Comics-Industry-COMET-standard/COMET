@@ -1,0 +1,11 @@
+name: Resolicited
+label: Resolicited
+position: 87
+tier: extended
+owner: distributor
+type: Y/N
+required: 'no'
+length: '1'
+description: |-
+  A re-issued item was previously listed, but was cancelled before shipping and is being listed again. No previous orders were committed, and this re-issue will be the first time this product is being ordered.
+example: N

@@ -1,0 +1,13 @@
+name: CountryOfOrigin
+label: CountryOfOrigin
+position: 124
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: 3,1
+description: |-
+  4 digit code (3 digits and a suffex) that determines the country of origin.
+  The HTS code is used in conjunction with the country of origin.
+  Country of origin data helps determine whether a product qualifies for preferential tariff treatment under free trade agreements.
+  Country of origin codes are maintained by the U.S. International Trade Commission (ITC).

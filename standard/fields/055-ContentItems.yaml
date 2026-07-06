@@ -1,0 +1,13 @@
+name: ContentItems
+label: ContentItems
+position: 55
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: Text field that indicates what is in the collection.
+example: 'Collects Secret Origins #48, Swamp Thing #40, The Sandman #8, Doom Patrol #25, Warlord #48 and
+  #55, Legion of Super-Heroes #298, Nathaniel Dusk #1, Infinity Inc. #14, The New Teen Titans #16, The
+  Best of DC: Blue Ribbon Digest #58, Watchmen #1, Camelot 3000 #1, Batman: The Dark Knight Returns #2,
+  Angel Love #1, and History of the DC Universe #1-2'

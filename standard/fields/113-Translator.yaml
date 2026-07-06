@@ -1,0 +1,8 @@
+name: Translator
+label: Translator
+position: 113
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+description: Translator of the material.

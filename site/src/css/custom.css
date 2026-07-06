@@ -1,0 +1,116 @@
+/**
+ * COMET Standard reference site theme.
+ * Dark / space palette pulled from the COMET logo (deep indigo night sky,
+ * comet-cyan accent, warm meteor highlight). Clean and reference-focused.
+ */
+
+:root {
+  --ifm-color-primary: #2a6df4;
+  --ifm-color-primary-dark: #1560ef;
+  --ifm-color-primary-darker: #135ae2;
+  --ifm-color-primary-darkest: #104aba;
+  --ifm-color-primary-light: #4681f5;
+  --ifm-color-primary-lighter: #548af6;
+  --ifm-color-primary-lightest: #7ba6f8;
+
+  --ifm-code-font-size: 92%;
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --comet-cyan: #3fd0e0;
+}
+
+/* Dark mode: deep space background. */
+[data-theme='dark'] {
+  --ifm-color-primary: #6fa8ff;
+  --ifm-color-primary-dark: #4b91ff;
+  --ifm-color-primary-darker: #3985ff;
+  --ifm-color-primary-darkest: #0563ff;
+  --ifm-color-primary-light: #93bfff;
+  --ifm-color-primary-lighter: #a5caff;
+  --ifm-color-primary-lightest: #dae8ff;
+
+  --ifm-background-color: #0b1020;
+  --ifm-background-surface-color: #121933;
+  --ifm-navbar-background-color: #0b1020;
+  --ifm-footer-background-color: #070b18;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
+}
+
+/* ------------------------------------------------------------------ */
+/* Field-tier badges + Data Dictionary table                          */
+/* ------------------------------------------------------------------ */
+
+.comet-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.comet-badge--essential { background: rgba(63, 208, 224, 0.15); color: #17a2b8; border-color: rgba(63, 208, 224, 0.4); }
+.comet-badge--core { background: rgba(42, 109, 244, 0.15); color: #2a6df4; border-color: rgba(42, 109, 244, 0.4); }
+.comet-badge--extended { background: rgba(155, 89, 245, 0.15); color: #7c3aed; border-color: rgba(155, 89, 245, 0.4); }
+.comet-badge--yes { background: rgba(34, 160, 90, 0.15); color: #1a8a4c; border-color: rgba(34, 160, 90, 0.4); }
+.comet-badge--conditional { background: rgba(217, 145, 20, 0.15); color: #b8770f; border-color: rgba(217, 145, 20, 0.4); }
+.comet-badge--no { background: rgba(120, 130, 150, 0.12); color: #6b7488; border-color: rgba(120, 130, 150, 0.3); }
+
+[data-theme='dark'] .comet-badge--essential { color: #63d4e6; }
+[data-theme='dark'] .comet-badge--core { color: #7ba6f8; }
+[data-theme='dark'] .comet-badge--extended { color: #b794f6; }
+[data-theme='dark'] .comet-badge--yes { color: #4ade80; }
+[data-theme='dark'] .comet-badge--conditional { color: #f0b429; }
+[data-theme='dark'] .comet-badge--no { color: #94a3b8; }
+
+/* Data Dictionary controls */
+.dd-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin: 1rem 0 1.25rem;
+}
+.dd-control { display: flex; flex-direction: column; gap: 0.25rem; }
+.dd-control label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; opacity: 0.7; }
+.dd-control input,
+.dd-control select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.9rem;
+}
+.dd-search { min-width: 240px; }
+.dd-count { font-size: 0.85rem; opacity: 0.7; margin-left: auto; }
+
+.dd-table-wrap { overflow-x: auto; }
+table.dd-table { width: 100%; display: table; }
+table.dd-table th { cursor: pointer; user-select: none; white-space: nowrap; }
+table.dd-table th .dd-arrow { opacity: 0.5; font-size: 0.7em; }
+table.dd-table td code { font-size: 0.85em; }
+.dd-empty { padding: 1.5rem; text-align: center; opacity: 0.7; }
+
+/* Home hero */
+.comet-hero {
+  padding: 2rem 0 1rem;
+}
+.comet-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.comet-stat {
+  flex: 1 1 140px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  background: var(--ifm-background-surface-color);
+}
+.comet-stat__num { font-size: 1.9rem; font-weight: 700; line-height: 1; color: var(--ifm-color-primary); }
+.comet-stat__label { font-size: 0.8rem; opacity: 0.75; margin-top: 0.35rem; }

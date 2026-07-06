@@ -1,0 +1,19 @@
+name: Description
+label: Description
+position: 19
+tier: core
+owner: publisher
+type: Text
+required: 'yes'
+length: '150000'
+description: |-
+  The Description field displays the full description associated with the item. Note that this text will not contain any HTML formatting, and double quotes will be escaped to maintain file integrity.
+example: Erica's heartbreak in the wake of tragedy turns to rage as she faces Cutter one final time. But
+  who else will fall at the hands of the Order, and how will things change for Cecilia and the House of
+  Slaughter?
+notes: |-
+  All text should be UTF-8 encoded
+  Text shall not contain HTML.
+  Do not use double quotes
+  Remove any special characters before submission (Example: MS Word formatting).
+  All text values should be trimmed of any leading or trailing whitespace at the input and output interfaces of any entities handling data.

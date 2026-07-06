@@ -1,0 +1,99 @@
+---
+id: intro
+title: The COMET Standard
+sidebar_label: Introduction
+sidebar_position: 1
+slug: /
+---
+
+import meta from '@site/src/data/meta.json';
+
+<div className="comet-hero">
+
+# The COMET Standard
+
+**COMET** is an open metadata standard for the comics industry — a common language for
+describing comics products (periodicals, graphic novels, and related items) across
+publishers, distributors, and retailers.
+
+This site is the **always-current human-readable reference**. Every field and picklist
+page you see is generated directly from the standard's YAML source at build time, so it
+can never drift from the canonical data.
+
+<div className="comet-hero__stats">
+  <div className="comet-stat">
+    <div className="comet-stat__num">v{meta.version}</div>
+    <div className="comet-stat__label">Current version</div>
+  </div>
+  <div className="comet-stat">
+    <div className="comet-stat__num">{meta.totalFields}</div>
+    <div className="comet-stat__label">Fields</div>
+  </div>
+  <div className="comet-stat">
+    <div className="comet-stat__num">{meta.totalPicklists}</div>
+    <div className="comet-stat__label">Picklists</div>
+  </div>
+  <div className="comet-stat">
+    <div className="comet-stat__num">{meta.requiredCount}</div>
+    <div className="comet-stat__label">Always required</div>
+  </div>
+</div>
+
+</div>
+
+## Start here
+
+- **[Data Dictionary](/data-dictionary)** — a searchable, sortable table of all {meta.totalFields} fields. This is the page most people use.
+- **[Fields by tier](/fields/essential)** — full detail for every field, grouped Essential → Core → Extended.
+- **[Picklists](/picklists)** — the {meta.totalPicklists} controlled vocabularies referenced by Pick List fields.
+- **[Implementation Guide](/implementation-guide)** — how to adopt COMET in practice.
+- **[White Paper](/white-paper)** — the background, rationale, and industry context.
+
+## The three data tiers
+
+Every field belongs to one of three tiers, which also determines who owns it.
+
+<table>
+  <thead>
+    <tr><th>Tier</th><th>Owner</th><th>Fields</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span className="comet-badge comet-badge--essential">Essential</span></td>
+      <td>Publisher</td>
+      <td>{meta.tiers.find((t) => t.key === 'essential').count}</td>
+      <td>The minimum to identify a product: title, primary identifier (UPC/ISBN/EAN), price, category.</td>
+    </tr>
+    <tr>
+      <td><span className="comet-badge comet-badge--core">Core</span></td>
+      <td>Publisher</td>
+      <td>{meta.tiers.find((t) => t.key === 'core').count}</td>
+      <td>Everything that describes <em>what the product is</em>.</td>
+    </tr>
+    <tr>
+      <td><span className="comet-badge comet-badge--extended">Extended</span></td>
+      <td>Distributor</td>
+      <td>{meta.tiers.find((t) => t.key === 'extended').count}</td>
+      <td>Everything that describes <em>how to order it</em>.</td>
+    </tr>
+  </tbody>
+</table>
+
+Current composition: **{meta.tiers.find((t) => t.key === 'essential').count} essential,
+{' '}{meta.tiers.find((t) => t.key === 'core').count} core,
+{' '}{meta.tiers.find((t) => t.key === 'extended').count} extended** — {meta.totalFields} fields total,
+of which {meta.requiredCount} are always required and a further {meta.conditionalCount} are conditionally
+required (e.g. for comics, for books, for variant covers).
+
+## How to contribute
+
+The standard is *living*. Anyone can propose a change — see
+[CONTRIBUTING](https://github.com/Comics-Industry-COMET-standard/COMET/blob/main/CONTRIBUTING.md).
+In short: open an issue using one of the templates, or submit a pull request. All changes
+are reviewed and merged by the COMET Standards Committee.
+
+---
+
+The COMET Standard is © ComicsPRO, released under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The marketing site lives at
+[cometstandard.com](https://cometstandard.com).

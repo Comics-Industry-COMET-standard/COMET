@@ -1,0 +1,11 @@
+name: UnitWidth
+label: Unit Width
+position: 75
+tier: core
+owner: publisher
+type: Decimal
+required: 'yes'
+length: 10,4
+description: |-
+  The Width field displays the width of the item in inches (Imperial), or cm (Metric), rounded to the fourth decimal place.
+example: '12.3616'

@@ -1,0 +1,11 @@
+name: EditorISNI
+label: EditorISNI
+position: 68
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The ISNI number for the Editor (if any), comma separated list of all editors on the item, multiple creators should be separated by a semicolon, this field should be text.
+example: 0000 0004 2851 3043

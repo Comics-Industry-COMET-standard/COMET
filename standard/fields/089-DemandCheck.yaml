@@ -1,0 +1,11 @@
+name: DemandCheck
+label: DemandCheck
+position: 89
+tier: extended
+owner: distributor
+type: Y/N
+required: 'no'
+length: '1'
+description: |-
+  After the Final Order Cut-off deadline, the publisher will evaluate the orders and determine if the product will be reprinted. If the orders do not justify a reprint, all orders will be canceled, and retailers will be notified via the Order Cancellation section of their invoices.
+example: N

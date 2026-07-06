@@ -1,0 +1,11 @@
+name: ArtistISNI
+label: ArtistISNI
+position: 60
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The ISNI number for the Artist, comma separated list of all artists on the item, multiple creators should be separated by a semicolon, this field should be text.
+example: 0000 0001 1691 8041

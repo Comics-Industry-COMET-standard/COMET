@@ -1,0 +1,10 @@
+name: MaxOrderQuantity
+label: MaxOrderQuantity
+position: 111
+tier: extended
+owner: distributor
+type: Number
+required: 'no'
+length: '5'
+description: |-
+  The MaxOrderQuantity field indicates the maximum orderable quantity, if any, of that item. If blank, there is no limit.

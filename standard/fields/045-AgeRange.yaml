@@ -1,0 +1,13 @@
+name: AgeRange
+label: AgeRange
+position: 45
+tier: core
+owner: publisher
+type: Pick List
+required: for_kids_items
+length: '4'
+picklist: AgeRange
+description: |-
+  The AgeRange field is a four-character alphanumeric range of ages that apply to the target audience of the item. See AgeRange List of Values
+example: 14UP
+notes: See the AgeRange table in the Data Definitions.

@@ -1,0 +1,11 @@
+name: InkerISNI
+label: InkerISNI
+position: 66
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The ISNI number for the Inker (if any), comma separated list of all inkers on the item, multiple creators should be separated by a semicolon, this field should be text.
+example: 0000 0003 5502 7529

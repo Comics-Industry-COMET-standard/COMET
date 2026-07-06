@@ -1,0 +1,15 @@
+name: SeriesCode
+label: SeriesCode
+position: 31
+tier: core
+owner: publisher
+type: Number
+required: for_comics
+length: '24'
+description: |-
+  SeriesCode is used to denote a specific title numerically and encompasses all issues of a given title.  For Comics, a series code should be unique to the first 11 digits of a UPC code (with some exceptions).
+example: '75960609661'
+notes: |-
+  SeriesCode must be on all periodicals (including one-shots, annuals, and multi-issue series), as well as all multi-volume collected editions in any format.
+
+  SeriesCode may be on TPBs/HC/Absolute/Other formats that do not have a second volume.

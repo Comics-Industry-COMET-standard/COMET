@@ -1,0 +1,11 @@
+name: Letterer
+label: Letterer
+position: 71
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '128'
+description: |-
+  The Letterer field identifies the primary creator responsible for lettering the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.
+example: Breitweiser, Elizabeth

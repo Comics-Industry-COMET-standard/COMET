@@ -1,0 +1,8 @@
+name: CreatorBio
+label: CreatorBio
+position: 114
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+description: Bio of Creators

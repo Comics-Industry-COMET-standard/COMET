@@ -1,0 +1,10 @@
+name: BundleUPCs
+label: BundleUPCs
+position: 93
+tier: extended
+owner: distributor
+type: Composite
+required: 'no'
+length: '2048'
+description: What UPCs are within this bundle of items?
+example: 72513032443605151, 72513032443605161

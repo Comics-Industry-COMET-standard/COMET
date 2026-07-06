@@ -1,0 +1,10 @@
+name: InitialOrderDate
+label: InitialOrderDate
+position: 20
+tier: extended
+owner: distributor
+type: Date
+required: 'no'
+length: '10'
+description: Identifies when the initial orders are due on a product (YYYY-MM-DD)
+example: '2021-02-02'

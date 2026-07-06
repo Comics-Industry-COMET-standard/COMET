@@ -1,0 +1,11 @@
+name: NETPrice
+label: NETPrice
+position: 8
+tier: extended
+owner: distributor
+type: Decimal
+required: 'no'
+length: 10,2
+description: |-
+  If an Item is flagged as NET Priced, it defaults to the USD item price. Use this field to override that default. (Example: 5.06 for an item that is net priced at $5.06)
+example: '5.06'

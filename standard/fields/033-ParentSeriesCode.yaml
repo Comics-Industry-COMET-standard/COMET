@@ -1,0 +1,12 @@
+name: ParentSeriesCode
+label: ParentSeriesCode
+position: 33
+tier: core
+owner: publisher
+type: Number
+required: 'no'
+length: '24'
+description: |-
+  The ParentSeriesCode will indicate a series code that this is a child of (example: Annual is the child of a series code).  Batman (1940) is the parent of Batman New52 (2011), which is the parent of Batman Rebirth (2016).  Is only intended for the first issue of a series, or for a one-shot
+example: '76194130640'
+notes: Ensure that the parent code is an item within the same format as the child item.

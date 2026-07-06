@@ -1,0 +1,11 @@
+name: FOCItem
+label: FOCItem
+position: 88
+tier: extended
+owner: distributor
+type: Y/N
+required: 'no'
+length: '1'
+description: |-
+  This field denotes whether a title is eligible for order adjustments by the Final Order Cutoff.
+example: Y

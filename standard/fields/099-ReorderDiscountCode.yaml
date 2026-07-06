@@ -1,0 +1,11 @@
+name: ReorderDiscountCode
+label: ReorderDiscountCode
+position: 99
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+length: '6'
+description: |-
+  Discount codes are the code which designates which discount an account is eligible for a reorder.
+example: DR

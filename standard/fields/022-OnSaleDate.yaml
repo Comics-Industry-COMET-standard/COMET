@@ -1,0 +1,11 @@
+name: OnSaleDate
+label: OnSaleDate
+position: 22
+tier: core
+owner: publisher
+type: Date
+required: 'yes'
+length: '10'
+description: |-
+  The OnSaleDate field provides the expected On Sale Date/In-Store Date for the item, expressed in YYYY-MM-DD.
+example: '45735'

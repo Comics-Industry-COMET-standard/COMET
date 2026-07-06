@@ -1,0 +1,12 @@
+name: BISAC2
+label: BISAC2
+position: 40
+tier: core
+owner: publisher
+type: Pick List
+required: 'no'
+length: '9'
+picklist: BISACCode
+description: |-
+  The BISAC field denotes the first 9-character alphanumeric BISAC code associated with the item. The Book Industry  Standards and Communications (BISAC) Subject Heading list is an industry-approved list of subject descriptors, intended  to help retailers and data providers standardize genre and subject classification.
+example: CGN004010

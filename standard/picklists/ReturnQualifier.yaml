@@ -1,0 +1,10 @@
+name: ReturnQualifier
+source_columns:
+- ReturnQualifier
+- Description
+count: 2
+values:
+- ReturnQualifier: Open Return
+  Description: Unlimited return.
+- ReturnQualifier: Return with Qualifier
+  Description: May only return (ReturnPercent).

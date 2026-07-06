@@ -1,0 +1,13 @@
+name: VariantRatio
+label: VariantRatio
+position: 30
+tier: core
+owner: publisher
+type: Text
+required: 'no'
+length: '6'
+description: |-
+  The VariantRatio field is a numeric field that denotes the ordering requirement, if any, to purchase the item.  This should be expressed in the format of X:Y for a 1 in 25, we would express X = 1 and Y = 25 for a result of 1:25.  If empty, we assume this product is not a ratio variant
+example: '0.0590277777777778'
+notes: |-
+  This was brought up as an item we should revisit, should we display this as 1:20 rather than 20?

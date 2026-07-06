@@ -1,0 +1,23 @@
+---
+id: data-dictionary
+title: Data Dictionary
+sidebar_label: Data Dictionary
+sidebar_position: 10
+slug: /data-dictionary
+description: A searchable, sortable master table of every field in the COMET Standard.
+---
+
+import DataDictionary from '@site/src/components/DataDictionary';
+import meta from '@site/src/data/meta.json';
+
+# Data Dictionary
+
+Every field in the COMET Standard (**{meta.totalFields}** in total). Search, sort any
+column, or filter by tier and required-status. Click a field name to jump to its full
+detail entry. This table is generated from the standard's YAML — it is never edited by hand.
+
+<DataDictionary />
+
+Looking for the full description, example, and notes for a field? Open it from the table
+above, or browse the tier pages directly:
+[Essential](/fields/essential) · [Core](/fields/core) · [Extended](/fields/extended).

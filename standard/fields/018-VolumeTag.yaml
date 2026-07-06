@@ -1,0 +1,12 @@
+name: VolumeTag
+label: VolumeTag
+position: 18
+tier: core
+owner: publisher
+type: Pick List
+required: 'no'
+length: '16'
+picklist: VolumeType
+description: Is the collection referred to as a Book, Season, Volume or other?
+example: Volume
+notes: See the VolumeType table in the Data Definitions.

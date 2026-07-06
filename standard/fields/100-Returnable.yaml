@@ -1,0 +1,10 @@
+name: Returnable
+label: Returnable
+position: 100
+tier: extended
+owner: distributor
+type: Y/N
+required: 'no'
+length: '1'
+description: The item is returnable
+example: Y

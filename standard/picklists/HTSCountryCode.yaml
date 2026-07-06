@@ -1,0 +1,95 @@
+name: HTSCountryCode
+source_columns:
+- Schedule C Code
+- Country Name
+- Notes
+count: 38
+values:
+- Schedule C Code: '100.0'
+  Country Name: United States of America
+- Schedule C Code: '101.0'
+  Country Name: Greenland
+- Schedule C Code: '122.0'
+  Country Name: Canada
+- Schedule C Code: '161.0'
+  Country Name: St. Pierre and Miquelon
+- Schedule C Code: '201.0'
+  Country Name: Mexico
+  Notes: Includes Isla de Cozumel and Islas Revillagigedo
+- Schedule C Code: '205.0'
+  Country Name: Guatemala
+- Schedule C Code: '208.0'
+  Country Name: Belize
+- Schedule C Code: '211.0'
+  Country Name: El Salvador
+- Schedule C Code: '215.0'
+  Country Name: Honduras
+  Notes: Includes Islas de la Bahia and Swan Islands
+- Schedule C Code: '219.0'
+  Country Name: Nicaragua
+- Schedule C Code: '223.0'
+  Country Name: Costa Rica
+- Schedule C Code: '225.0'
+  Country Name: Panama
+- Schedule C Code: '232.0'
+  Country Name: Bermuda
+- Schedule C Code: '236.0'
+  Country Name: Bahamas
+  Notes: Includes Grand Bahama Great Abaco and associated islands
+- Schedule C Code: '239.0'
+  Country Name: Cuba
+  Notes: Includes Isla de Pinos
+- Schedule C Code: '241.0'
+  Country Name: Jamaica
+  Notes: Includes Morant Cays and Pedro Cays
+- Schedule C Code: '243.0'
+  Country Name: Turks and Caicos Islands
+- Schedule C Code: '244.0'
+  Country Name: Cayman Islands
+- Schedule C Code: '245.0'
+  Country Name: Haiti
+  Notes: Includes Ile de la Gonave and Tortuga Island
+- Schedule C Code: '247.0'
+  Country Name: Dominican Republic
+- Schedule C Code: '301.0'
+  Country Name: Colombia
+- Schedule C Code: '307.0'
+  Country Name: Venezuela
+- Schedule C Code: '312.0'
+  Country Name: Guyana
+- Schedule C Code: '315.0'
+  Country Name: Suriname
+- Schedule C Code: '317.0'
+  Country Name: French Guiana
+- Schedule C Code: '331.0'
+  Country Name: Ecuador
+  Notes: Includes the Galapagos Islands
+- Schedule C Code: '333.0'
+  Country Name: Peru
+- Schedule C Code: '335.0'
+  Country Name: Bolivia
+- Schedule C Code: '337.0'
+  Country Name: Chile
+  Notes: Includes Isla Sala y Gomez and Easter Island
+- Schedule C Code: '351.0'
+  Country Name: Brazil
+  Notes: Includes Fernando di Noronha
+- Schedule C Code: '353.0'
+  Country Name: Paraguay
+- Schedule C Code: '355.0'
+  Country Name: Uruguay
+- Schedule C Code: '357.0'
+  Country Name: Argentina
+- Schedule C Code: '400.0'
+  Country Name: Iceland
+- Schedule C Code: '401.0'
+  Country Name: Sweden
+  Notes: Includes Islands of Oland and Gotland
+- Schedule C Code: '403.9'
+  Country Name: Norway
+- Schedule C Code: '405.0'
+  Country Name: Finland
+  Notes: Includes Aland Islands
+- Schedule C Code: '409.9'
+  Country Name: Denmark
+  Notes: Except Greenland

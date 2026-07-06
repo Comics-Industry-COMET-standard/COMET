@@ -1,0 +1,12 @@
+name: PublisherName
+label: PublisherName
+position: 24
+tier: core
+owner: publisher
+type: Text
+required: 'yes'
+length: '256'
+description: |-
+  The PublisherName field displays the name of the publisher or division that is publishing the item.
+example: Marvel Comics
+notes: Please be consistent. "Honesty Comics" is not the same as "HONESTY COMICS" or "Honesty."

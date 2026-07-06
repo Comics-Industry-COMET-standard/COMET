@@ -1,0 +1,10 @@
+name: BundleQuantity
+label: BundleQuantity
+position: 92
+tier: extended
+owner: distributor
+type: Number
+required: 'no'
+length: '10'
+description: Quantity of breakable units in a bundle.
+example: '12'

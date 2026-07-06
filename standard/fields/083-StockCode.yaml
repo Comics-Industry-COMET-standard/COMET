@@ -1,0 +1,12 @@
+name: StockCode
+label: StockCode
+position: 83
+tier: extended
+owner: distributor
+type: Text
+required: 'yes'
+length: '36'
+description: The Primary ID of the item that can be tracked month-to-month
+example: ID11031989
+notes: |-
+  If the PrimaryID is UPC/ISBN or EAN, it should be repeated in this field.  Note that ISBN is not 1-to-1, EAN is 1-to-1.

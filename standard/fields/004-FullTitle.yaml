@@ -1,0 +1,14 @@
+name: FullTitle
+label: FullTitle
+position: 4
+tier: essential
+owner: publisher
+type: Text
+required: 'yes'
+length: '512'
+description: |-
+  The Full Title field encompasses the full title of an item. This field may contain relevant information such as series number and  variant information, where applicable.
+example: 'Something is Killing the Children #1 Fall of the House of Slaughter Artgerm Full Art (Mature)'
+notes: |-
+  Periodical: [SeriesName] #[issue number] [one-shot] Cover [cvr letter] [variant description] [ratio in 1:## format]
+  Collcted/GN/TPB/HC: [SeriesName] [volume abbreviation] [number with leading zero] [variant description] [format abbr]

@@ -1,0 +1,11 @@
+name: CatalogMonth
+label: CatalogMonth
+position: 97
+tier: extended
+owner: distributor
+type: Date
+required: 'no'
+length: '7'
+description: |-
+  Identifies the original date the item was solicited.  Also known as "Catalogue Date". (YYYY-MM), for items that are cancelled and re-solicited, this date will be for the NEW solicitation date.
+example: 2021-02

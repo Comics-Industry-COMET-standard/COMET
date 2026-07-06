@@ -1,0 +1,12 @@
+name: SeriesFrequency
+label: SeriesFrequency
+position: 27
+tier: core
+owner: publisher
+type: Pick List
+required: for_comics_and_graphic_novels
+length: '32'
+picklist: SeriesFrequency
+description: |-
+  The SeriesFrequency field discloses information specific to the publication cadence or type of the item.
+example: Monthly

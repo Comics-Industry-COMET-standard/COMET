@@ -1,0 +1,82 @@
+name: AgeRange
+source_columns:
+- AgeRange
+- Description
+count: 38
+values:
+- AgeRange: '2'
+  Description: 0-2 years
+- AgeRange: '3'
+  Description: 0-3 years
+- AgeRange: '103'
+  Description: 1-3 years
+- AgeRange: '204'
+  Description: 2-4 years
+- AgeRange: '205'
+  Description: 2-5 years
+- AgeRange: '305'
+  Description: 3-5 years
+- AgeRange: '306'
+  Description: 3-6 years
+- AgeRange: '307'
+  Description: 3-7 years
+- AgeRange: '406'
+  Description: 4-6 years
+- AgeRange: '407'
+  Description: 4-7 years
+- AgeRange: '408'
+  Description: 4-8 years
+- AgeRange: '506'
+  Description: 5-6 years
+- AgeRange: '507'
+  Description: 5-7 years
+- AgeRange: '508'
+  Description: 5-8 years
+- AgeRange: '509'
+  Description: 5-9 years
+- AgeRange: '607'
+  Description: 6-7 years
+- AgeRange: '608'
+  Description: 6-8 years
+- AgeRange: '609'
+  Description: 6-9 years
+- AgeRange: 07UP
+  Description: 7 and up
+- AgeRange: '708'
+  Description: 7-8 years
+- AgeRange: '709'
+  Description: 7-9 years
+- AgeRange: '710'
+  Description: 7-10 years
+- AgeRange: '711'
+  Description: 7-11 years
+- AgeRange: '809'
+  Description: 8-9 years
+- AgeRange: '810'
+  Description: 8-10 years
+- AgeRange: '811'
+  Description: 8-11 years
+- AgeRange: '812'
+  Description: 8-12 years
+- AgeRange: '912'
+  Description: 9-12 years
+- AgeRange: 10UP
+  Description: 10 and up
+- AgeRange: '1014'
+  Description: 10-14 years
+- AgeRange: '1017'
+  Description: 10-17 years
+- AgeRange: 12UP
+  Description: 12 and up
+- AgeRange: '1214'
+  Description: 12-14 years
+- AgeRange: 13UP
+  Description: 13 and up
+- AgeRange: '1317'
+  Description: 13-17 years
+- AgeRange: 14UP
+  Description: 14 and up
+- AgeRange: 16UP
+  Description: 16 and up
+- AgeRange: 18UP
+  Description: 18 and up

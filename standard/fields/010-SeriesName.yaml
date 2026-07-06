@@ -1,0 +1,12 @@
+name: SeriesName
+label: SeriesName
+position: 10
+tier: core
+owner: publisher
+type: Text
+required: for_comics_and_graphic_novels
+length: '256'
+description: The SeriesName field is the main title of the item.
+example: Something is Killing the Children
+notes: |-
+  SeriesName must be included on one-shots, multi-issue series, and TPB/HC/Collected Editions

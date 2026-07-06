@@ -1,0 +1,12 @@
+name: IssueSort
+label: IssueSort
+position: 37
+tier: core
+owner: publisher
+type: Decimal
+required: 'no'
+length: 14,2
+description: |-
+  Sorting number (which should usually be the same as the Series Number, except for when it is not. i.e. Deathmate Black, Deathmate Series, Zero Hour #4 (which was the first issue).
+example: '57.5'
+notes: Decimal places are allowed.

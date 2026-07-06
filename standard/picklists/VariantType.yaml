@@ -1,0 +1,13 @@
+name: VariantType
+source_columns:
+- VariantType
+- Description
+- Use Case Example
+count: 2
+values:
+- VariantType: Primary Cover
+  Description: This could be either the primary copy of an issue OR the primary reprint of an issue, which will have a separate
+    UPC but could still be in the title family.
+  Use Case Example: Not gated. Open order.
+- VariantType: Variant cover
+  Description: Not the primary cover.

@@ -1,0 +1,11 @@
+name: ImageUrl
+label: ImageUrl
+position: 106
+tier: extended
+owner: distributor
+type: Text
+required: 'no'
+length: '512'
+description: |-
+  The ImageURL field is a persistent URL that points to a high-resolution cover image for the item. If the field is blank, it  means that a cover image is not yet available.
+example: https://retailerservices.diamondcomics.com/Image/ItemMainImageLowRes/STK355285.jpg

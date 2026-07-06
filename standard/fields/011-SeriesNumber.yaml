@@ -1,0 +1,12 @@
+name: SeriesNumber
+label: SeriesNumber
+position: 11
+tier: core
+owner: publisher
+type: Number
+required: for_comics
+length: '12'
+description: |-
+  The SeriesNumber field displays the issue or volume number of the item, if it is part of a numbered series.
+example: '1'
+notes: This filed should only hold numbers, never text. Decimal places are allowed.

@@ -1,0 +1,11 @@
+name: VariantType
+label: VariantType
+position: 108
+tier: core
+owner: publisher
+type: Text
+required: for_comics
+length: '24'
+description: |-
+  This indicates whether something is a primary or variant cover.  Primary being the first (or main_ cover in a product.  Mandatory for comics only, optional for Graphic Novels.
+example: Primary Cover
