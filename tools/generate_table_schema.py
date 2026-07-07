@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIELDS_DIR = os.path.join(ROOT, "standard", "fields")
 PICKLIST_DIR = os.path.join(ROOT, "standard", "picklists")
 OUT = os.path.join(ROOT, "schema", "comet.table-schema.json")
-VERSION = "1.1.10"
+VERSION = "1.1.11"
 
 # COMET field type -> Frictionless type.
 # Note: "Number" covers identifiers (UPC/ISBN/EAN) where leading zeros and
