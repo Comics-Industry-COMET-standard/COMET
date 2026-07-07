@@ -56,7 +56,7 @@ notes: |-
 
 ## What happens next
 
-The Standards Committee reviews your proposal (see [GOVERNANCE.md](GOVERNANCE.md)). A change is accepted when at least two of the three members approve. Accepted changes are versioned and recorded in [CHANGELOG.md](CHANGELOG.md).
+The Standards Committee reviews your proposal (see [GOVERNANCE.md](GOVERNANCE.md)). A change is accepted only by **unanimous consent** of the Committee. Accepted changes are versioned and recorded in [CHANGELOG.md](CHANGELOG.md).
 
 ## Code of conduct
 

@@ -16,7 +16,9 @@ standard/
   fields/        One YAML file per field (125 fields). The canonical data dictionary.
   picklists/     Controlled vocabularies (15 lists) referenced by fields.
 schema/
-  comet.schema.json   Machine-readable JSON Schema, generated from standard/fields/.
+  comet.table-schema.json  Frictionless Table Schema — validates COMET CSV files
+                           (types, required columns, picklist values). Primary schema.
+  comet.schema.json        JSON Schema (draft-07) — structural inventory for JSON/API tooling.
 docs/            Implementation Guide, white paper, and project plan.
 examples/        Real-world sample files used as conformance fixtures.
 tools/           Generation and validation scripts.
@@ -46,8 +48,10 @@ The standard is *living*. Anyone can propose a change — read [CONTRIBUTING.md]
 The reference documentation site is generated directly from `standard/fields/` and `standard/picklists/`, so it can never drift from the standard itself. Regenerate the JSON Schema and validate examples with:
 
 ```
-python3 tools/generate.py      # rebuild schema/comet.schema.json from the YAML
-python3 tools/validate.py FILE  # check a CSV/data file against the current standard
+python3 tools/generate.py                # rebuild schema/comet.schema.json (JSON Schema)
+python3 tools/generate_table_schema.py   # rebuild schema/comet.table-schema.json (Table Schema)
+python3 tools/validate_table.py FILE     # validate a CSV against the standard (needs: pip install frictionless)
+python3 tools/validate.py FILE           # lightweight column/required check (no dependencies)
 ```
 
 ---

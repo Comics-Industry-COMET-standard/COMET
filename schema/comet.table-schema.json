@@ -1,0 +1,2179 @@
+{
+  "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+  "name": "comet-standard",
+  "title": "COMET Standard",
+  "description": "Frictionless Table Schema for the COMET comics metadata standard. Generated from standard/fields/*.yaml. Validates COMET CSV files by column, type, required status, and controlled-vocabulary (picklist) values.",
+  "version": "1.1.10",
+  "fields": [
+    {
+      "name": "UPC",
+      "title": "UPC",
+      "type": "string",
+      "description": "The UPC field provides the 12-digit Universal Product Code and 5-digit supplements for all items which carry a UPC. Example 75960608857704611  [Required for comics]",
+      "constraints": {
+        "maxLength": 17
+      },
+      "cometTier": "essential",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics"
+    },
+    {
+      "name": "ISBN",
+      "title": "ISBN",
+      "type": "string",
+      "description": "The ISBN field provides the 13-digit International Standard Book Number for all items which carry an ISBN.  [Required for books]",
+      "constraints": {
+        "maxLength": 13
+      },
+      "cometTier": "essential",
+      "cometOwner": "publisher",
+      "cometRequired": "for_books"
+    },
+    {
+      "name": "EAN",
+      "title": "EAN",
+      "type": "string",
+      "description": "The EAN is 13-digit International Standard Book Number + the additional 5 characters in price.  [Required for books]",
+      "constraints": {
+        "maxLength": 18
+      },
+      "cometTier": "essential",
+      "cometOwner": "publisher",
+      "cometRequired": "for_books"
+    },
+    {
+      "name": "FullTitle",
+      "title": "FullTitle",
+      "type": "string",
+      "description": "The Full Title field encompasses the full title of an item. This field may contain relevant information such as series number and  variant information, where applicable.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 512
+      },
+      "cometTier": "essential",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "PriceUSD",
+      "title": "PriceUSD",
+      "type": "number",
+      "description": "The PriceUSD field includes the suggested retail price in US dollars that is printed on the product. Note that this field will not include a dollar sign ($).  Also known as the MSRP.  [Always required]",
+      "constraints": {
+        "required": true
+      },
+      "cometTier": "essential",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "PriceCAD",
+      "title": "PriceCAD",
+      "type": "number",
+      "description": "The PriceCAD field includes the suggested retail price  in Canadian dollars. Note that this field will not include a dollar sign ($).  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "PriceUK",
+      "title": "PriceUK",
+      "type": "number",
+      "description": "The PriceUK field includes the suggested retail price in British Pound Sterling. Note that this field will not include a currency symbol.  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "NETPrice",
+      "title": "NETPrice",
+      "type": "number",
+      "description": "If an Item is flagged as NET Priced, it defaults to the USD item price. Use this field to override that default. (Example: 5.06 for an item that is net priced at $5.06)  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "NETPriced",
+      "title": "NETPriced",
+      "type": "boolean",
+      "description": "Indicates a product is NET priced  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "SeriesName",
+      "title": "SeriesName",
+      "type": "string",
+      "description": "The SeriesName field is the main title of the item.  [Required for comics & graphic novels]",
+      "constraints": {
+        "maxLength": 256
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics_and_graphic_novels"
+    },
+    {
+      "name": "SeriesNumber",
+      "title": "SeriesNumber",
+      "type": "string",
+      "description": "The SeriesNumber field displays the issue or volume number of the item, if it is part of a numbered series.  [Required for comics]",
+      "constraints": {
+        "maxLength": 12
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics"
+    },
+    {
+      "name": "SubTitle",
+      "title": "SubTitle",
+      "type": "string",
+      "description": "The Subtitle field is a secondary or explanatory title, often printed on the cover of an item.  [Optional]",
+      "constraints": {
+        "maxLength": 256
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CoverDescription",
+      "title": "CoverDescription",
+      "type": "string",
+      "description": "The CoverDescription field describes the cover differences between different editions. Should not contain the word \"Cover\".  [Required for variant (non-main) covers]",
+      "constraints": {
+        "maxLength": 256
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_variant_covers"
+    },
+    {
+      "name": "PrimaryFormatType",
+      "title": "PrimaryFormatType",
+      "type": "string",
+      "description": "The PrimaryFormatType field contains a code that corresponds to the specific format of the item. Book, Merchandise (See FormatTypes in the data definitions). This should start from the outside of the product to the inside (a slipcase is outside of hardcovers, for example). For example, if an item is a box set of hardcovers, the FormatType should be BX.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 2,
+        "enum": [
+          "BE",
+          "BF",
+          "BI",
+          "BJ",
+          "BK",
+          "BM",
+          "BR",
+          "BX",
+          "CA",
+          "CB",
+          "CC",
+          "CD",
+          "CG",
+          "CL",
+          "CO",
+          "CS",
+          "CT",
+          "CV",
+          "DE",
+          "DG",
+          "DW",
+          "FM",
+          "FZ",
+          "GC",
+          "GN",
+          "HC",
+          "HS",
+          "JW",
+          "LB",
+          "LF",
+          "LG",
+          "MA",
+          "MF",
+          "MG",
+          "MM",
+          "MU",
+          "MW",
+          "MX",
+          "MZ",
+          "NO",
+          "NT",
+          "OS",
+          "PA",
+          "PB",
+          "PC",
+          "PD",
+          "PF",
+          "PK",
+          "PO",
+          "PR",
+          "PS",
+          "PU",
+          "RS",
+          "SC",
+          "SK",
+          "SM",
+          "SO",
+          "ST",
+          "TA",
+          "TC",
+          "TF",
+          "TG",
+          "TM",
+          "TR",
+          "VI",
+          "WM",
+          "WW",
+          "XA",
+          "ZA",
+          "ZC",
+          "ZD",
+          "ZE"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes",
+      "cometPicklist": "FormatType"
+    },
+    {
+      "name": "SecondaryFormatTypes",
+      "title": "SecondaryFormatTypes",
+      "type": "string",
+      "description": "SecondaryFormatTypes further defines format types. For example, Hardcover > Omnibus (See FormatTypes in the data definitions). This field is a comma-separated list of format codes.  [Optional]",
+      "constraints": {
+        "maxLength": 64,
+        "enum": [
+          "BE",
+          "BF",
+          "BI",
+          "BJ",
+          "BK",
+          "BM",
+          "BR",
+          "BX",
+          "CA",
+          "CB",
+          "CC",
+          "CD",
+          "CG",
+          "CL",
+          "CO",
+          "CS",
+          "CT",
+          "CV",
+          "DE",
+          "DG",
+          "DW",
+          "FM",
+          "FZ",
+          "GC",
+          "GN",
+          "HC",
+          "HS",
+          "JW",
+          "LB",
+          "LF",
+          "LG",
+          "MA",
+          "MF",
+          "MG",
+          "MM",
+          "MU",
+          "MW",
+          "MX",
+          "MZ",
+          "NO",
+          "NT",
+          "OS",
+          "PA",
+          "PB",
+          "PC",
+          "PD",
+          "PF",
+          "PK",
+          "PO",
+          "PR",
+          "PS",
+          "PU",
+          "RS",
+          "SC",
+          "SK",
+          "SM",
+          "SO",
+          "ST",
+          "TA",
+          "TC",
+          "TF",
+          "TG",
+          "TM",
+          "TR",
+          "VI",
+          "WM",
+          "WW",
+          "XA",
+          "ZA",
+          "ZC",
+          "ZD",
+          "ZE"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no",
+      "cometPicklist": "FormatType"
+    },
+    {
+      "name": "ProductCategory",
+      "title": "ProductCategory",
+      "type": "string",
+      "description": "The ProductCategory is the categorization that the product falls under for taxation purposes.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 24,
+        "enum": [
+          "Comics",
+          "Magazines",
+          "Graphic Novels",
+          "Books",
+          "Games",
+          "Cards",
+          "Novelties",
+          "Apparel",
+          "Toys",
+          "Supplies",
+          "Sales Tools",
+          "AV Media",
+          "Food",
+          "Calendars"
+        ]
+      },
+      "cometTier": "essential",
+      "cometOwner": "publisher",
+      "cometRequired": "yes",
+      "cometPicklist": "ProductCategories"
+    },
+    {
+      "name": "TextNumber",
+      "title": "TextNumber",
+      "type": "string",
+      "description": "The TextNumber field (Red, Black, Omega, etc)  [Optional]",
+      "constraints": {
+        "maxLength": 64
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "VolumeTag",
+      "title": "VolumeTag",
+      "type": "string",
+      "description": "Is the collection referred to as a Book, Season, Volume or other?  [Optional]",
+      "constraints": {
+        "maxLength": 16,
+        "enum": [
+          "Book",
+          "Chapter",
+          "Part",
+          "Season",
+          "Volume",
+          "Year"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no",
+      "cometPicklist": "VolumeType"
+    },
+    {
+      "name": "Description",
+      "title": "Description",
+      "type": "string",
+      "description": "The Description field displays the full description associated with the item. Note that this text will not contain any HTML formatting, and double quotes will be escaped to maintain file integrity.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 150000
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "InitialOrderDate",
+      "title": "InitialOrderDate",
+      "type": "date",
+      "description": "Identifies when the initial orders are due on a product (YYYY-MM-DD)  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "FOCDate",
+      "title": "FOCDate",
+      "type": "date",
+      "description": "The FOCDate field provides the Final Order Cutoff date for the item, expressed in YYYY-MM-DD. Example 2023-10-13 (may be different than publisher FOC)  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "OnSaleDate",
+      "title": "OnSaleDate",
+      "type": "date",
+      "description": "The OnSaleDate field provides the expected On Sale Date/In-Store Date for the item, expressed in YYYY-MM-DD.  [Always required]",
+      "constraints": {
+        "required": true
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "OriginalCatalogDate",
+      "title": "OriginalCatalogDate",
+      "type": "date",
+      "description": "The OriginalCatalogDate field corresponds to the date when the item was originally listed, expressed in YYYY-MM-DD. (for Offered again and Resolicited Items)  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "PublisherName",
+      "title": "PublisherName",
+      "type": "string",
+      "description": "The PublisherName field displays the name of the publisher or division that is publishing the item.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 256
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "ImprintName",
+      "title": "ImprintName",
+      "type": "string",
+      "description": "The ImprintName field displays the name of the imprint or brand that is publishing the item. Example: DC Universe versus Black Label, Skybound for Image Comics  [Optional]",
+      "constraints": {
+        "maxLength": 256
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Storyline",
+      "title": "Storyline",
+      "type": "string",
+      "description": "A group of issues that tie together into one storyline, these may cross series codes, or be contained within one series code.  [Optional]",
+      "constraints": {
+        "maxLength": 256
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "SeriesFrequency",
+      "title": "SeriesFrequency",
+      "type": "string",
+      "description": "The SeriesFrequency field discloses information specific to the publication cadence or type of the item.  [Required for comics & graphic novels]",
+      "constraints": {
+        "maxLength": 32,
+        "enum": [
+          "Once",
+          "Weekly",
+          "Bi-Weekly",
+          "Twice-Monthly",
+          "Monthly",
+          "Bi-Monthly",
+          "Quarterly",
+          "Annual",
+          "Irregular"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics_and_graphic_novels",
+      "cometPicklist": "SeriesFrequency"
+    },
+    {
+      "name": "MaxIssue",
+      "title": "MaxIssue",
+      "type": "string",
+      "description": "The Max Issue information refers to the highest number (last issue) in a limited series. For example, in Umbrella Academy: Apocalypse Suite #4 (of 6), the Max Issue data [(of 6)] identifies the title as a six-issue limited series.  [Optional]",
+      "constraints": {
+        "maxLength": 12
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "VariantNumber",
+      "title": "VariantNumber",
+      "type": "string",
+      "description": "A numerical representation of the order in which a variant was added (i.e. the fourth added variant would have the number 4), should correspond with the last 2 or 3 digits of a UPC (depending on your ICP pattern) where possible.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 6
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "VariantRatio",
+      "title": "VariantRatio",
+      "type": "string",
+      "description": "The VariantRatio field is a numeric field that denotes the ordering requirement, if any, to purchase the item.  This should be expressed in the format of X:Y for a 1 in 25, we would express X = 1 and Y = 25 for a result of 1:25.  If empty, we assume this product is not a ratio variant  [Optional]",
+      "constraints": {
+        "maxLength": 6
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "SeriesCode",
+      "title": "SeriesCode",
+      "type": "string",
+      "description": "SeriesCode is used to denote a specific title numerically and encompasses all issues of a given title.  For Comics, a series code should be unique to the first 11 digits of a UPC code (with some exceptions).  [Required for comics]",
+      "constraints": {
+        "maxLength": 24
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics"
+    },
+    {
+      "name": "SeriesType",
+      "title": "SeriesType",
+      "type": "string",
+      "description": "What type of a comic is this, for example a one-shot vs ongoing vs limited series?  [Required for comics]",
+      "constraints": {
+        "maxLength": 32,
+        "enum": [
+          "One-Shot",
+          "Ongoing",
+          "Limited Series",
+          "Annual"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics",
+      "cometPicklist": "SeriesType"
+    },
+    {
+      "name": "ParentSeriesCode",
+      "title": "ParentSeriesCode",
+      "type": "string",
+      "description": "The ParentSeriesCode will indicate a series code that this is a child of (example: Annual is the child of a series code).  Batman (1940) is the parent of Batman New52 (2011), which is the parent of Batman Rebirth (2016).  Is only intended for the first issue of a series, or for a one-shot  [Optional]",
+      "constraints": {
+        "maxLength": 24
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "SeriesFamily",
+      "title": "SeriesFamily",
+      "type": "string",
+      "description": "SeriesFamily represents a family of titles (All Spider-Man, All Batman, All X-Men, All Titans)  [Optional]",
+      "constraints": {
+        "maxLength": 128
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "PageCount",
+      "title": "PageCount",
+      "type": "string",
+      "description": "The PageCount field displays the page count of the publication.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 6
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "PrimaryContentType",
+      "title": "PrimaryContentType",
+      "type": "string",
+      "description": "PrimaryContentType defines something as primarily original content, or primarily reprinted content.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 32,
+        "enum": [
+          "Original Content",
+          "Collected Content",
+          "Digital First Printing",
+          "Primarily Original Content",
+          "Primarily Reprinted Content"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes",
+      "cometPicklist": "PrimaryContentType"
+    },
+    {
+      "name": "IssueSort",
+      "title": "IssueSort",
+      "type": "number",
+      "description": "Sorting number (which should usually be the same as the Series Number, except for when it is not. i.e. Deathmate Black, Deathmate Series, Zero Hour #4 (which was the first issue).  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "BISAC1",
+      "title": "BISAC1",
+      "type": "string",
+      "description": "The BISAC field denotes the first 9-character alphanumeric BISAC code associated with the item. The Book Industry  Standards and Communications (BISAC) Subject Heading list is an industry-approved list of subject descriptors, intended  to help retailers and data providers standardize genre and subject classification.  (NOTE: You may use any BISAC categories available from the BISG)  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 9,
+        "enum": [
+          "ART004000",
+          "CGN000000",
+          "CGN001000",
+          "CGN004010",
+          "CGN004020",
+          "CGN004030",
+          "CGN004040",
+          "CGN004050",
+          "CGN004060",
+          "CGN004070",
+          "CGN004080",
+          "CGN004090",
+          "CGN004100",
+          "CGN004110",
+          "CGN004120",
+          "CGN004130",
+          "CGN004140",
+          "CGN004150",
+          "CGN004160",
+          "CGN004170",
+          "CGN004180",
+          "CGN004190",
+          "CGN004200",
+          "CGN004210",
+          "CGN004230",
+          "CGN004240",
+          "CGN004250",
+          "CGN004260",
+          "CGN004270",
+          "CGN004280",
+          "CGN004290",
+          "CGN004300",
+          "CGN004310",
+          "CGN004320",
+          "CGN004330",
+          "CGN006000",
+          "CGN007000",
+          "CGN007010",
+          "CGN007020",
+          "CGN007030",
+          "CGN007040",
+          "CGN008000",
+          "CGN009000",
+          "CGN010000",
+          "CGN011000",
+          "CGN012000",
+          "CGN013000",
+          "CGN014000",
+          "CGN015000",
+          "CGN016000",
+          "CGN017000",
+          "CGN018000",
+          "CGN019000",
+          "CGN020000",
+          "CGN021000",
+          "HUM001000",
+          "JNF062000",
+          "JNF062010",
+          "JNF062020",
+          "JNF062030",
+          "JNF062040",
+          "JUV008000",
+          "JUV008010",
+          "JUV008020",
+          "JUV008030",
+          "JUV008040",
+          "JUV008050",
+          "JUV008060",
+          "JUV008070",
+          "JUV008080",
+          "JUV008090",
+          "JUV008100",
+          "JUV008110",
+          "JUV008120",
+          "JUV008130",
+          "JUV008140",
+          "JUV008150",
+          "JUV008160",
+          "JUV008170",
+          "JUV008180",
+          "YAF010000",
+          "YAF010010",
+          "YAF010020",
+          "YAF010030",
+          "YAF010040",
+          "YAF010050",
+          "YAF010060",
+          "YAF010070",
+          "YAF010080",
+          "YAF010090",
+          "YAF010100",
+          "YAF010110",
+          "YAF010120",
+          "YAF010130",
+          "YAF010140",
+          "YAF010150",
+          "YAF010160",
+          "YAF010170",
+          "YAF010180",
+          "YAF035000",
+          "YAN012000",
+          "YAN012010",
+          "YAN012020",
+          "YAN012030",
+          "YAN012040"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes",
+      "cometPicklist": "BISACCode"
+    },
+    {
+      "name": "BISAC1Description",
+      "title": "BISAC1Description",
+      "type": "string",
+      "description": "The BISAC Description field provides the descriptive translation of the corresponding BISAC1 subject code.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 128
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "BISAC2",
+      "title": "BISAC2",
+      "type": "string",
+      "description": "The BISAC field denotes the first 9-character alphanumeric BISAC code associated with the item. The Book Industry  Standards and Communications (BISAC) Subject Heading list is an industry-approved list of subject descriptors, intended  to help retailers and data providers standardize genre and subject classification.  [Optional]",
+      "constraints": {
+        "maxLength": 9,
+        "enum": [
+          "ART004000",
+          "CGN000000",
+          "CGN001000",
+          "CGN004010",
+          "CGN004020",
+          "CGN004030",
+          "CGN004040",
+          "CGN004050",
+          "CGN004060",
+          "CGN004070",
+          "CGN004080",
+          "CGN004090",
+          "CGN004100",
+          "CGN004110",
+          "CGN004120",
+          "CGN004130",
+          "CGN004140",
+          "CGN004150",
+          "CGN004160",
+          "CGN004170",
+          "CGN004180",
+          "CGN004190",
+          "CGN004200",
+          "CGN004210",
+          "CGN004230",
+          "CGN004240",
+          "CGN004250",
+          "CGN004260",
+          "CGN004270",
+          "CGN004280",
+          "CGN004290",
+          "CGN004300",
+          "CGN004310",
+          "CGN004320",
+          "CGN004330",
+          "CGN006000",
+          "CGN007000",
+          "CGN007010",
+          "CGN007020",
+          "CGN007030",
+          "CGN007040",
+          "CGN008000",
+          "CGN009000",
+          "CGN010000",
+          "CGN011000",
+          "CGN012000",
+          "CGN013000",
+          "CGN014000",
+          "CGN015000",
+          "CGN016000",
+          "CGN017000",
+          "CGN018000",
+          "CGN019000",
+          "CGN020000",
+          "CGN021000",
+          "HUM001000",
+          "JNF062000",
+          "JNF062010",
+          "JNF062020",
+          "JNF062030",
+          "JNF062040",
+          "JUV008000",
+          "JUV008010",
+          "JUV008020",
+          "JUV008030",
+          "JUV008040",
+          "JUV008050",
+          "JUV008060",
+          "JUV008070",
+          "JUV008080",
+          "JUV008090",
+          "JUV008100",
+          "JUV008110",
+          "JUV008120",
+          "JUV008130",
+          "JUV008140",
+          "JUV008150",
+          "JUV008160",
+          "JUV008170",
+          "JUV008180",
+          "YAF010000",
+          "YAF010010",
+          "YAF010020",
+          "YAF010030",
+          "YAF010040",
+          "YAF010050",
+          "YAF010060",
+          "YAF010070",
+          "YAF010080",
+          "YAF010090",
+          "YAF010100",
+          "YAF010110",
+          "YAF010120",
+          "YAF010130",
+          "YAF010140",
+          "YAF010150",
+          "YAF010160",
+          "YAF010170",
+          "YAF010180",
+          "YAF035000",
+          "YAN012000",
+          "YAN012010",
+          "YAN012020",
+          "YAN012030",
+          "YAN012040"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no",
+      "cometPicklist": "BISACCode"
+    },
+    {
+      "name": "BISAC2Description",
+      "title": "BISAC2Description",
+      "type": "string",
+      "description": "The BISAC Description field provides the descriptive translation of the corresponding BISAC1 subject code.  [Optional]",
+      "constraints": {
+        "maxLength": 128
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "BISAC3",
+      "title": "BISAC3",
+      "type": "string",
+      "description": "The BISAC field denotes the first 9-character alphanumeric BISAC code associated with the item. The Book Industry  Standards and Communications (BISAC) Subject Heading list is an industry-approved list of subject descriptors, intended  to help retailers and data providers standardize genre and subject classification.  [Optional]",
+      "constraints": {
+        "maxLength": 9,
+        "enum": [
+          "ART004000",
+          "CGN000000",
+          "CGN001000",
+          "CGN004010",
+          "CGN004020",
+          "CGN004030",
+          "CGN004040",
+          "CGN004050",
+          "CGN004060",
+          "CGN004070",
+          "CGN004080",
+          "CGN004090",
+          "CGN004100",
+          "CGN004110",
+          "CGN004120",
+          "CGN004130",
+          "CGN004140",
+          "CGN004150",
+          "CGN004160",
+          "CGN004170",
+          "CGN004180",
+          "CGN004190",
+          "CGN004200",
+          "CGN004210",
+          "CGN004230",
+          "CGN004240",
+          "CGN004250",
+          "CGN004260",
+          "CGN004270",
+          "CGN004280",
+          "CGN004290",
+          "CGN004300",
+          "CGN004310",
+          "CGN004320",
+          "CGN004330",
+          "CGN006000",
+          "CGN007000",
+          "CGN007010",
+          "CGN007020",
+          "CGN007030",
+          "CGN007040",
+          "CGN008000",
+          "CGN009000",
+          "CGN010000",
+          "CGN011000",
+          "CGN012000",
+          "CGN013000",
+          "CGN014000",
+          "CGN015000",
+          "CGN016000",
+          "CGN017000",
+          "CGN018000",
+          "CGN019000",
+          "CGN020000",
+          "CGN021000",
+          "HUM001000",
+          "JNF062000",
+          "JNF062010",
+          "JNF062020",
+          "JNF062030",
+          "JNF062040",
+          "JUV008000",
+          "JUV008010",
+          "JUV008020",
+          "JUV008030",
+          "JUV008040",
+          "JUV008050",
+          "JUV008060",
+          "JUV008070",
+          "JUV008080",
+          "JUV008090",
+          "JUV008100",
+          "JUV008110",
+          "JUV008120",
+          "JUV008130",
+          "JUV008140",
+          "JUV008150",
+          "JUV008160",
+          "JUV008170",
+          "JUV008180",
+          "YAF010000",
+          "YAF010010",
+          "YAF010020",
+          "YAF010030",
+          "YAF010040",
+          "YAF010050",
+          "YAF010060",
+          "YAF010070",
+          "YAF010080",
+          "YAF010090",
+          "YAF010100",
+          "YAF010110",
+          "YAF010120",
+          "YAF010130",
+          "YAF010140",
+          "YAF010150",
+          "YAF010160",
+          "YAF010170",
+          "YAF010180",
+          "YAF035000",
+          "YAN012000",
+          "YAN012010",
+          "YAN012020",
+          "YAN012030",
+          "YAN012040"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no",
+      "cometPicklist": "BISACCode"
+    },
+    {
+      "name": "BISAC3Description",
+      "title": "BISAC3Description",
+      "type": "string",
+      "description": "The BISAC Description field provides the descriptive translation of the corresponding BISAC1 subject code.  [Optional]",
+      "constraints": {
+        "maxLength": 128
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Language",
+      "title": "Language",
+      "type": "string",
+      "description": "The Language field provides a 3-character code that provides information about the language of the item. See Language Codes  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 3,
+        "enum": [
+          "ang",
+          "ara",
+          "arc",
+          "baq",
+          "ben",
+          "cat",
+          "chi",
+          "chr",
+          "cze",
+          "dan",
+          "dum",
+          "dut",
+          "eng",
+          "est",
+          "fre",
+          "ger",
+          "gle",
+          "grc",
+          "gre",
+          "heb",
+          "hin",
+          "hrv",
+          "hun",
+          "ind",
+          "ita",
+          "jpn",
+          "kor",
+          "lat",
+          "lat",
+          "mul",
+          "nor",
+          "per",
+          "pol",
+          "por",
+          "qls",
+          "rus",
+          "sam",
+          "san",
+          "slv",
+          "spa",
+          "swe",
+          "tam",
+          "tur",
+          "yid"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes",
+      "cometPicklist": "LanguageCode"
+    },
+    {
+      "name": "AgeRange",
+      "title": "AgeRange",
+      "type": "string",
+      "description": "The AgeRange field is a four-character alphanumeric range of ages that apply to the target audience of the item. See AgeRange List of Values  [Required for kids' items]",
+      "constraints": {
+        "maxLength": 4,
+        "enum": [
+          "2",
+          "3",
+          "103",
+          "204",
+          "205",
+          "305",
+          "306",
+          "307",
+          "406",
+          "407",
+          "408",
+          "506",
+          "507",
+          "508",
+          "509",
+          "607",
+          "608",
+          "609",
+          "07UP",
+          "708",
+          "709",
+          "710",
+          "711",
+          "809",
+          "810",
+          "811",
+          "812",
+          "912",
+          "10UP",
+          "1014",
+          "1017",
+          "12UP",
+          "1214",
+          "13UP",
+          "1317",
+          "14UP",
+          "16UP",
+          "18UP"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_kids_items",
+      "cometPicklist": "AgeRange"
+    },
+    {
+      "name": "MediaRating",
+      "title": "MediaRating",
+      "type": "string",
+      "description": "The MediaRating field discloses the actual media rating value for the item. See MediaRating List of Values  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 32,
+        "enum": [
+          "Explicit Content",
+          "Mature",
+          "Parental Advisory SLC",
+          "Rated T+",
+          "Rated T",
+          "All Ages",
+          "No Rating",
+          "[null/blank]"
+        ]
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes",
+      "cometPicklist": "MediaRating"
+    },
+    {
+      "name": "Adult",
+      "title": "Adult",
+      "type": "boolean",
+      "description": "Adult (A) titles are intended for sale only to adult customers. This field identifies items which have explicit content intended for adults.  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "VariantMechanic",
+      "title": "VariantMechanic",
+      "type": "string",
+      "description": "If this is not an open order variant, the constraint type for ordering is described here.  [Optional]",
+      "constraints": {
+        "maxLength": 36
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "AlternateUPC",
+      "title": "AlternateUPC",
+      "type": "string",
+      "description": "In the case a title has more variant covers than can be accounted for with the item's base barcode, this alternate UPC code would indicate the other barcodes used to qualify for a ratioed variant.  [Optional]",
+      "constraints": {
+        "maxLength": 17
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "OrderRequirementCodes",
+      "title": "OrderRequirementCodes",
+      "type": "string",
+      "description": "OrderRequirementCodes is a comma separated list containing barcodes that may be used in conjunction with ExceedPercentage or ratio variants. Ratio and non-ratio variants, by default count toward these thresholds unless listed in the OrderExceptionCodes.  [Optional]",
+      "constraints": {
+        "maxLength": 2048
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "OrderExceptionCodes",
+      "title": "OrderExceptionCodes",
+      "type": "string",
+      "description": "Comma separated list of barcodes outside of the default set that are to be EXCLUDED in ratio threshhold math.  [Optional]",
+      "constraints": {
+        "maxLength": 2048
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ExceedPercentage",
+      "title": "ExceedPercentage",
+      "type": "string",
+      "description": "X% of the item identified in the OrderRequirementCodes field.  [Optional]",
+      "constraints": {
+        "maxLength": 4
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "EligibleCodes",
+      "title": "EligibleCodes",
+      "type": "string",
+      "description": "The EligibleCodes field is a numeric field of barcodes that should be used in conjunction with ExceedPercentage. Barcodes in this field will be used to determine the total quantity of all items of a specific title that must meet or exceed the quantity calculated by ExceedPercentage  [Optional]",
+      "constraints": {
+        "maxLength": 2048
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "PublisherCode",
+      "title": "PublisherCode",
+      "type": "string",
+      "description": "Numerical representation of the 5 digit \"Manufacturer Code\" used to designate a UPC code  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 5
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "ContentItems",
+      "title": "ContentItems",
+      "type": "string",
+      "description": "Text field that indicates what is in the collection.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Reprint",
+      "title": "Reprint",
+      "type": "boolean",
+      "description": "Is the item a Reprint? Facsimile editions - Image Firsts, something that has come out previously.  [Required for comics]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics"
+    },
+    {
+      "name": "Printing",
+      "title": "Printing",
+      "type": "string",
+      "description": "What printing is the item  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 3
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "WriterISNI",
+      "title": "WriterISNI",
+      "type": "string",
+      "description": "The ISNI number for the Writer, comma separated list of all writers on the item, multiple creators should be separated by a semicolon, this field should be text.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Writer",
+      "title": "Writer",
+      "type": "string",
+      "description": "The Writer field identifies the primary creator responsible for authoring/writing the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "ArtistISNI",
+      "title": "ArtistISNI",
+      "type": "string",
+      "description": "The ISNI number for the Artist, comma separated list of all artists on the item, multiple creators should be separated by a semicolon, this field should be text.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Artist",
+      "title": "Artist",
+      "type": "string",
+      "description": "The Arist field identifies the primary creator responsible for illustrating the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Required for comics]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics"
+    },
+    {
+      "name": "CoverArtistISNI",
+      "title": "CoverArtistISNI",
+      "type": "string",
+      "description": "The ISNI number for the Cover Artist, comma separated list of all artists on the item, multiple creators should be separated by a semicolon, this field should be text.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CoverArtist",
+      "title": "CoverArtist",
+      "type": "string",
+      "description": "The CoverArtist field identifies the primary creator responsible for illustrating the cover of the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Required for comics]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics"
+    },
+    {
+      "name": "ColoristISNI",
+      "title": "ColoristISNI",
+      "type": "string",
+      "description": "The ISNI number for the Colorist (if any), comma separated list of all colorists on the item, multiple creators should be separated by a semicolon, this field should be text.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Colorist",
+      "title": "Colorist",
+      "type": "string",
+      "description": "The Colorist field identifies the primary creator responsible for coloring the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "InkerISNI",
+      "title": "InkerISNI",
+      "type": "string",
+      "description": "The ISNI number for the Inker (if any), comma separated list of all inkers on the item, multiple creators should be separated by a semicolon, this field should be text.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Inker",
+      "title": "Inker",
+      "type": "string",
+      "description": "The Inker field identifies the primary creator responsible for inking the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "EditorISNI",
+      "title": "EditorISNI",
+      "type": "string",
+      "description": "The ISNI number for the Editor (if any), comma separated list of all editors on the item, multiple creators should be separated by a semicolon, this field should be text.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Editor",
+      "title": "Editor",
+      "type": "string",
+      "description": "The Editor field identifies the primary creator responsible for editing the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "LettererISNI",
+      "title": "LettererISNI",
+      "type": "string",
+      "description": "The ISNI number for the Letterer (if any), comma separated list of all letterers on the item, multiple creators should be separated by a semicolon, this field should be text.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Letterer",
+      "title": "Letterer",
+      "type": "string",
+      "description": "The Letterer field identifies the primary creator responsible for lettering the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Optional]",
+      "constraints": {
+        "maxLength": 128
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Contributor",
+      "title": "Contributor",
+      "type": "string",
+      "description": "The Contributor field identifies the any other primary creator responsible for some other contribution to the item. If there is more than one  contributor per role, all contributors will be displayed as FIRST LAST name and separated by a semicolon.  [Optional]",
+      "constraints": {
+        "maxLength": 16
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CartonQuantity",
+      "title": "CartonQuantity",
+      "type": "string",
+      "description": "The CartonQuantity field displays the number of individual units contained in a single carton.  [Optional]",
+      "constraints": {
+        "maxLength": 6
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "UnitMeasurements",
+      "title": "UnitMeasurements",
+      "type": "string",
+      "description": "Imperial or Metric  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 8
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "Unit Width",
+      "title": "UnitWidth",
+      "type": "number",
+      "description": "The Width field displays the width of the item in inches (Imperial), or cm (Metric), rounded to the fourth decimal place.  [Always required]",
+      "constraints": {
+        "required": true
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "Unit Height",
+      "title": "UnitHeight",
+      "type": "number",
+      "description": "The Height field displays the  height of the item in inches (Imperial), or cm (Metric), rounded to the fourth decimal place.  [Always required]",
+      "constraints": {
+        "required": true
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "Unit Depth",
+      "title": "UnitDepth",
+      "type": "number",
+      "description": "The depth field displays the depth of the item in inches (Imperial), or cm (Metric), rounded to the fourth decimal place.  [Always required]",
+      "constraints": {
+        "required": true
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "Unit Weight",
+      "title": "UnitWeight",
+      "type": "number",
+      "description": "The weight field displays the weight of the item in pounds (Imperial) or grams (Metric), rounded to the fourth decimal place.  [Always required]",
+      "constraints": {
+        "required": true
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "Case Weight",
+      "title": "CaseWeight",
+      "type": "number",
+      "description": "The weight of a case pounds (Imperial) or grams (Metric), rounded to the fourth decimal place.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Case Length",
+      "title": "CaseLength",
+      "type": "number",
+      "description": "The length of a case inches (Imperial), or cm (Metric), rounded to the fourth decimal place.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Case Width",
+      "title": "CaseWidth",
+      "type": "number",
+      "description": "The width of a case inches (Imperial), or cm (Metric), rounded to the fourth decimal place.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Case Height",
+      "title": "CaseHeight",
+      "type": "number",
+      "description": "The height of the case inches (Imperial), or cm (Metric), rounded to the fourth decimal place.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "StockCode",
+      "title": "StockCode",
+      "type": "string",
+      "description": "The Primary ID of the item that can be tracked month-to-month  [Always required]",
+      "constraints": {
+        "required": true,
+        "maxLength": 36
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "yes"
+    },
+    {
+      "name": "MonthCode",
+      "title": "MonthCode",
+      "type": "string",
+      "description": "The ID of the item for a specific catalogue month (traditionally MMMYY#### format)  [Optional]",
+      "constraints": {
+        "maxLength": 10
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "AlternateCode",
+      "title": "AlternateCode",
+      "type": "string",
+      "description": "Any alternate codes for other distribution arms.  [Optional]",
+      "constraints": {
+        "maxLength": 36
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "OfferedAgain",
+      "title": "OfferedAgain",
+      "type": "boolean",
+      "description": "Sometimes, items are solicited more than once in subsequent catalogues. This field denotes if an item is being Offered Again.  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Resolicited",
+      "title": "Resolicited",
+      "type": "boolean",
+      "description": "A re-issued item was previously listed, but was cancelled before shipping and is being listed again. No previous orders were committed, and this re-issue will be the first time this product is being ordered.  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "FOCItem",
+      "title": "FOCItem",
+      "type": "boolean",
+      "description": "This field denotes whether a title is eligible for order adjustments by the Final Order Cutoff.  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "DemandCheck",
+      "title": "DemandCheck",
+      "type": "boolean",
+      "description": "After the Final Order Cut-off deadline, the publisher will evaluate the orders and determine if the product will be reprinted. If the orders do not justify a reprint, all orders will be canceled, and retailers will be notified via the Order Cancellation section of their invoices.  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "InitialOrderIncrement",
+      "title": "InitialOrderIncrement",
+      "type": "string",
+      "description": "Minimum quantity required to order, similar to a case quantity.  [Optional]",
+      "constraints": {
+        "maxLength": 10
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ReOrderIncrement",
+      "title": "ReOrderIncrement",
+      "type": "string",
+      "description": "Minimum quantity required to re-order, similar to a case quantity.  [Optional]",
+      "constraints": {
+        "maxLength": 10
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "BundleQuantity",
+      "title": "BundleQuantity",
+      "type": "string",
+      "description": "Quantity of breakable units in a bundle.  [Optional]",
+      "constraints": {
+        "maxLength": 10
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "BundleUPCs",
+      "title": "BundleUPCs",
+      "type": "string",
+      "description": "What UPCs are within this bundle of items?  [Optional]",
+      "constraints": {
+        "maxLength": 2048
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "SalesRestrictions",
+      "title": "SalesRestrictions",
+      "type": "string",
+      "description": "The SalesRestrictions field displays the geographic territories where the item may not be sold, in a comma separated list. See list of country codes (based on 2 character ISO 3166 country codes).  [Optional]",
+      "constraints": {
+        "maxLength": 2048
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "OrderFormNotes",
+      "title": "OrderFormNotes",
+      "type": "string",
+      "description": "Order Form Notes are parenthetical descriptions, added below catalogue line items, offering additional ordering information on solicited merchandise.  [Optional]",
+      "constraints": {
+        "maxLength": 1024
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CatalogPage",
+      "title": "CatalogPage",
+      "type": "string",
+      "description": "This field identifies the page number in the distributor catalogue on which an item’s solicitation information can be found.  [Optional]",
+      "constraints": {
+        "maxLength": 4
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CatalogMonth",
+      "title": "CatalogMonth",
+      "type": "date",
+      "description": "Identifies the original date the item was solicited.  Also known as \"Catalogue Date\". (YYYY-MM), for items that are cancelled and re-solicited, this date will be for the NEW solicitation date.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "DiscountCode",
+      "title": "DiscountCode",
+      "type": "string",
+      "description": "Discount codes are the code which designates which discount an account is eligible for. This supports fluctuating discounts based on publisher or vendor, and requires a table to decode.  [Optional]",
+      "constraints": {
+        "maxLength": 6
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ReorderDiscountCode",
+      "title": "ReorderDiscountCode",
+      "type": "string",
+      "description": "Discount codes are the code which designates which discount an account is eligible for a reorder.  [Optional]",
+      "constraints": {
+        "maxLength": 6
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Returnable",
+      "title": "Returnable",
+      "type": "boolean",
+      "description": "The item is returnable  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ReturnWindow",
+      "title": "ReturnWindow",
+      "type": "date",
+      "description": "The ReturnWindow field corresponds to the applicable date when an item can be returned  YYYY-MM-DD. Example 2021-05-01.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ReturnType",
+      "title": "ReturnType",
+      "type": "string",
+      "description": "The type of returnability (affidavit, stripped cover, return to publisher, etc)  [Optional]",
+      "constraints": {
+        "maxLength": 32,
+        "enum": [
+          "Affidavit",
+          "Full Copy Return",
+          "LabelReturn",
+          "Stripped Cover"
+        ]
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no",
+      "cometPicklist": "ReturnType"
+    },
+    {
+      "name": "ReturnQualifier",
+      "title": "ReturnQualifier",
+      "type": "string",
+      "description": "Open return, vs returns with qualifiers.  [Optional]",
+      "constraints": {
+        "maxLength": 32,
+        "enum": [
+          "Open Return",
+          "Return with Qualifier"
+        ]
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no",
+      "cometPicklist": "ReturnQualifier"
+    },
+    {
+      "name": "ReturnPercent",
+      "title": "ReturnPercent",
+      "type": "string",
+      "description": "Percentage of FOC order you may return  [Optional]",
+      "constraints": {
+        "maxLength": 3
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ImageUrl",
+      "title": "ImageUrl",
+      "type": "string",
+      "description": "The ImageURL field is a persistent URL that points to a high-resolution cover image for the item. If the field is blank, it  means that a cover image is not yet available.  [Optional]",
+      "constraints": {
+        "maxLength": 512
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ImageUpdateDate",
+      "title": "ImageUpdateDate",
+      "type": "date",
+      "description": "The date the image was last updated. Expressed in YYYY-MM-DD. Example, 2021-05-01. Should be populated with the date the first time when the ImageURL has a value.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "VariantType",
+      "title": "VariantType",
+      "type": "string",
+      "description": "This indicates whether something is a primary or variant cover.  Primary being the first (or main_ cover in a product.  Mandatory for comics only, optional for Graphic Novels.  [Required for comics]",
+      "constraints": {
+        "maxLength": 24
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "for_comics"
+    },
+    {
+      "name": "SalesStatusCode",
+      "title": "SalesStatusCode",
+      "type": "string",
+      "description": "A two digit code that indicates the status of a product. (See Sales Status Codes in Data Definitions)  [Optional]",
+      "constraints": {
+        "maxLength": 2
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "SalesTerritory",
+      "title": "SalesTerritory",
+      "type": "string",
+      "description": "Positive list of territories an item is available in.  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "MaxOrderQuantity",
+      "title": "MaxOrderQuantity",
+      "type": "string",
+      "description": "The MaxOrderQuantity field indicates the maximum orderable quantity, if any, of that item. If blank, there is no limit.  [Optional]",
+      "constraints": {
+        "maxLength": 5
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CoverColor",
+      "title": "CoverColor",
+      "type": "string",
+      "description": "This field is a simple indicator if a cover does or does not have color.  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Translator",
+      "title": "Translator",
+      "type": "string",
+      "description": "Translator of the material.  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CreatorBio",
+      "title": "CreatorBio",
+      "type": "string",
+      "description": "Bio of Creators  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "Reviews",
+      "title": "Reviews",
+      "type": "string",
+      "description": "Reviews or Pull Quotes for the item  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "ComparableTitles",
+      "title": "ComparableTitles",
+      "type": "string",
+      "description": "Other \"Similar\" titles, as a comma separated UPC/ISBN list.  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "NETPriceCA",
+      "title": "NETPriceCA",
+      "type": "number",
+      "description": "NET Price in CAD  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "NETPricedCA",
+      "title": "NETPricedCA",
+      "type": "boolean",
+      "description": "Boolean Y/N to indicate there is a Net Price in CAD  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "NETPriceUK",
+      "title": "NETPriceUK",
+      "type": "number",
+      "description": "NET Price in UK  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "NETPricedUK",
+      "title": "NETPricedUK",
+      "type": "boolean",
+      "description": "Boolean Y/N to indicate there is a Net Price in UK  [Optional]",
+      "trueValues": [
+        "Y",
+        "y",
+        "Yes",
+        "true"
+      ],
+      "falseValues": [
+        "N",
+        "n",
+        "No",
+        "false"
+      ],
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "DistributorPublisherCode",
+      "title": "DistributorPublisherCode",
+      "type": "string",
+      "description": "A code for the publisher that indicates the internal code for the distributor.  [Optional]",
+      "constraints": {
+        "maxLength": 10
+      },
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "TitleFamilyID",
+      "title": "TitleFamilyID",
+      "type": "string",
+      "description": "An ID to provide a linking between all formats and variants of a given title, comic, tpb, graphic novel, hardcover, deluxe hardcover, etc.  [Optional]",
+      "constraints": {
+        "maxLength": 10
+      },
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "HSCode",
+      "title": "HSCode",
+      "type": "number",
+      "description": "HS Codes are a six digit code that is an internationally recognized standard.  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "CountryOfOrigin",
+      "title": "CountryOfOrigin",
+      "type": "string",
+      "description": "4 digit code (3 digits and a suffex) that determines the country of origin.  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    },
+    {
+      "name": "OtherMarketOnSaleDate",
+      "title": "OtherMarketOnSaleDate",
+      "type": "date",
+      "description": "The date that other markets outside the comics industry may offer this item on sale, expressed in YYYY-MM-DD. Example 2023-10-13  [Optional]",
+      "cometTier": "extended",
+      "cometOwner": "distributor",
+      "cometRequired": "no"
+    },
+    {
+      "name": "DTCStreetDate",
+      "title": "DTCStreetDate",
+      "type": "date",
+      "description": "The date a direct to consumer publisher may offer this item on sale, expressed in YYYY-MM-DD. Example 2023-10-13  [Optional]",
+      "cometTier": "core",
+      "cometOwner": "publisher",
+      "cometRequired": "no"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}

@@ -18,7 +18,9 @@ The Committee is responsible for reviewing proposals, safeguarding backward comp
 
 - **Anyone** may open an issue or a change proposal, and may submit a pull request.
 - **Contributors** are people whose proposals or PRs have been accepted.
-- **The Standards Committee** reviews, decides, and merges. A change is accepted when at least two of the three members approve and none formally object.
+- **The Standards Committee** reviews, decides, and merges. A change is accepted only by **unanimous consent** of the Committee — every member must agree, and any member may block.
+
+> **Practical note on approvals.** Katie Pryde participates in Committee decisions but does not have a GitHub account. In practice, her assent is confirmed offline, and the two Committee members with GitHub accounts — Django Bohren (@djangobohren) and Brian Garside (@briangee) — record the approvals and perform the merge. A pull request is therefore not merged until both GitHub-based members have approved *and* Katie's agreement is confirmed.
 
 ## How a change moves through the process
 
@@ -43,6 +45,28 @@ COMET uses a three-part version, `MAJOR.MINOR.PATCH`, continuing the existing hi
 | **Value or clarification** — adding an optional field, adding a picklist value, wording clarifications | **PATCH** (`1.1.11`) | New optional field; new AgeRange value; description fix |
 
 This formalizes the convention already recorded in the changelog: value updates bump the last number, required/type changes bump the middle number, and the annual revision bumps the first.
+
+**Corrective clarifications are patches.** A type change only bumps the MINOR
+version when it alters the *data contract* — i.e. what values are accepted. When
+the declared type is simply brought in line with the value format a field already
+uses (no accepted value changes, no existing file affected), it is a **corrective
+clarification** and takes a PATCH. Example: correcting `CatalogMonth` from `Date`
+to `YearMonth` when it has always held `YYYY-MM` values.
+
+**Only normative changes bump the version.** The version number describes the
+*normative* standard — the field definitions, picklists, and required-field rules.
+The following are **non-normative** and do **not** trigger a version bump, though
+they are recorded in `CHANGELOG.md` under the release they ship with:
+
+- generated representations of the standard (the JSON Schema and Table Schema),
+- tooling (validators, generators, the documentation site),
+- example and sample files,
+- non-normative guidance (mapping notes, clarifying prose that doesn't change what
+  data is accepted).
+
+In other words: if it changes what a conforming COMET file may contain, it earns a
+version; if it only records, represents, documents, or tools the standard, it does
+not.
 
 Every released version is a **git tag** (e.g. `v1.1.10`) with a matching `CHANGELOG.md` entry.
 

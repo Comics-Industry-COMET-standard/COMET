@@ -38,6 +38,10 @@ def build_schema(fields):
             "x-tier": fld["tier"],
             "x-required": fld["required"],
         }
+        # YearMonth fields carry a YYYY-MM value; constrain the string shape.
+        if fld.get("type") == "YearMonth":
+            entry["pattern"] = r"^\d{4}-\d{2}$"
+            entry["x-format"] = "yearmonth"
         if fld.get("picklist"):
             entry["x-picklist"] = fld["picklist"]
         props[fld["name"]] = entry

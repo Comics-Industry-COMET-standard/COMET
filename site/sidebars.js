@@ -8,6 +8,7 @@ const sidebars = {
   reference: [
     'intro',
     'data-dictionary',
+    'schemas',
     {
       type: 'category',
       label: 'Fields by tier',

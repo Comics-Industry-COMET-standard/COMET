@@ -1,0 +1,65 @@
+---
+id: schemas
+title: Schemas
+description: Machine-readable schemas for the COMET Standard, by version.
+---
+
+# Schemas
+
+COMET publishes machine-readable schemas so software can validate comics data
+against the standard automatically. Because COMET files are **tabular** (CSV),
+the primary schema is a [Frictionless Table Schema][fd], which validates a file
+column-by-column: field names, data types, required columns, and
+controlled-vocabulary (picklist) values.
+
+A [JSON Schema][json] form is also provided as a structural inventory of the
+standard for JSON/API tooling.
+
+All schemas are **generated from the field and picklist definitions** in the
+repository, so they always match the published standard.
+
+## Current version
+
+### Version 1.1.10
+
+| Schema | Format | File |
+|---|---|---|
+| COMET Table Schema | Frictionless Table Schema | [comet.table-schema.json](/schema/comet.table-schema.json) |
+| COMET JSON Schema | JSON Schema (draft-07) | [comet.schema.json](/schema/comet.schema.json) |
+
+*125 fields · 23 always required · 15 fields constrained to picklist values.*
+
+## Validating a file
+
+Using the [Frictionless][fd] framework (Python):
+
+```bash
+pip install frictionless
+```
+
+```python
+from frictionless import Resource, Schema, Detector
+
+schema = Schema.from_descriptor("comet.table-schema.json")
+# Real files carry a subset of fields in any order — sync the schema to the header.
+resource = Resource("your-file.csv", schema=schema, detector=Detector(schema_sync=True))
+report = resource.validate()
+print(report.valid)
+```
+
+Or from the repository:
+
+```bash
+python3 tools/validate_table.py your-file.csv
+```
+
+## How versioning works
+
+Each released version of the standard has a corresponding schema, listed above.
+When the standard is updated (see the [Changelog](./changelog)), a new schema
+version is generated and added here. Older versions remain available so existing
+integrations keep working. See [Governance][gov] for the versioning policy.
+
+[fd]: https://specs.frictionlessdata.io/table-schema/
+[json]: https://json-schema.org/
+[gov]: https://github.com/Comics-Industry-COMET-standard/COMET/blob/main/GOVERNANCE.md

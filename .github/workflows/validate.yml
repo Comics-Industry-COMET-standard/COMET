@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: pip install pyyaml
+        run: pip install pyyaml frictionless
       - name: Check field YAML is well-formed
         run: |
           python3 - <<'PY'
@@ -29,8 +29,10 @@ jobs:
           PY
       - name: Ensure JSON Schema is up to date
         run: python3 tools/generate.py --check
+      - name: Ensure Table Schema is up to date
+        run: python3 tools/generate_table_schema.py --check
       - name: Validate example files against the standard
         run: |
           for f in examples/*.csv; do
-            python3 tools/validate.py "$f" || true
+            python3 tools/validate_table.py "$f" || true
           done

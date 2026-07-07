@@ -1,0 +1,676 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cometstandard.com/schema/comet.schema.json",
+  "title": "COMET Standard",
+  "description": "Machine-readable schema for the COMET comics metadata standard, generated from standard/fields/*.yaml",
+  "version": "1.1.10",
+  "type": "object",
+  "properties": {
+    "UPC": {
+      "type": "string",
+      "x-tier": "essential",
+      "x-required": "for_comics"
+    },
+    "ISBN": {
+      "type": "string",
+      "x-tier": "essential",
+      "x-required": "for_books"
+    },
+    "EAN": {
+      "type": "string",
+      "x-tier": "essential",
+      "x-required": "for_books"
+    },
+    "FullTitle": {
+      "type": "string",
+      "x-tier": "essential",
+      "x-required": "yes"
+    },
+    "PriceUSD": {
+      "type": "string",
+      "x-tier": "essential",
+      "x-required": "yes"
+    },
+    "PriceCAD": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "PriceUK": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "NETPrice": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "NETPriced": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "SeriesName": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics_and_graphic_novels"
+    },
+    "SeriesNumber": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics"
+    },
+    "SubTitle": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "CoverDescription": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_variant_covers"
+    },
+    "PrimaryFormatType": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes",
+      "x-picklist": "FormatType"
+    },
+    "SecondaryFormatTypes": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no",
+      "x-picklist": "FormatType"
+    },
+    "ProductCategory": {
+      "type": "string",
+      "x-tier": "essential",
+      "x-required": "yes",
+      "x-picklist": "ProductCategories"
+    },
+    "TextNumber": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "VolumeTag": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no",
+      "x-picklist": "VolumeType"
+    },
+    "Description": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "InitialOrderDate": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "FOCDate": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "OnSaleDate": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "OriginalCatalogDate": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "PublisherName": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "ImprintName": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Storyline": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "SeriesFrequency": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics_and_graphic_novels",
+      "x-picklist": "SeriesFrequency"
+    },
+    "MaxIssue": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "VariantNumber": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "VariantRatio": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "SeriesCode": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics"
+    },
+    "SeriesType": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics",
+      "x-picklist": "SeriesType"
+    },
+    "ParentSeriesCode": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "SeriesFamily": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "PageCount": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "PrimaryContentType": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes",
+      "x-picklist": "PrimaryContentType"
+    },
+    "IssueSort": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "BISAC1": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes",
+      "x-picklist": "BISACCode"
+    },
+    "BISAC1Description": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "BISAC2": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no",
+      "x-picklist": "BISACCode"
+    },
+    "BISAC2Description": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "BISAC3": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no",
+      "x-picklist": "BISACCode"
+    },
+    "BISAC3Description": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Language": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes",
+      "x-picklist": "LanguageCode"
+    },
+    "AgeRange": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_kids_items",
+      "x-picklist": "AgeRange"
+    },
+    "MediaRating": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes",
+      "x-picklist": "MediaRating"
+    },
+    "Adult": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "VariantMechanic": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "AlternateUPC": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "OrderRequirementCodes": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "OrderExceptionCodes": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "ExceedPercentage": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "EligibleCodes": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "PublisherCode": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "ContentItems": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Reprint": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics"
+    },
+    "Printing": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "WriterISNI": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Writer": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "ArtistISNI": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Artist": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics"
+    },
+    "CoverArtistISNI": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "CoverArtist": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics"
+    },
+    "ColoristISNI": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Colorist": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "InkerISNI": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Inker": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "EditorISNI": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Editor": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "LettererISNI": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Letterer": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Contributor": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "CartonQuantity": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "UnitMeasurements": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "UnitWidth": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "UnitHeight": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "UnitDepth": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "UnitWeight": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "yes"
+    },
+    "CaseWeight": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "CaseLength": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "CaseWidth": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "CaseHeight": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "StockCode": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "yes"
+    },
+    "MonthCode": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "AlternateCode": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "OfferedAgain": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "Resolicited": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "FOCItem": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "DemandCheck": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "InitialOrderIncrement": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "ReOrderIncrement": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "BundleQuantity": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "BundleUPCs": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "SalesRestrictions": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "OrderFormNotes": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "CatalogPage": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "CatalogMonth": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "DiscountCode": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "ReorderDiscountCode": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "Returnable": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "ReturnWindow": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "ReturnType": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no",
+      "x-picklist": "ReturnType"
+    },
+    "ReturnQualifier": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no",
+      "x-picklist": "ReturnQualifier"
+    },
+    "ReturnPercent": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "ImageUrl": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "ImageUpdateDate": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "VariantType": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "for_comics"
+    },
+    "SalesStatusCode": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "SalesTerritory": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "MaxOrderQuantity": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "CoverColor": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Translator": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "CreatorBio": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "Reviews": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "ComparableTitles": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "NETPriceCA": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "NETPricedCA": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "NETPriceUK": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "NETPricedUK": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "DistributorPublisherCode": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "TitleFamilyID": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "HSCode": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "CountryOfOrigin": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    },
+    "OtherMarketOnSaleDate": {
+      "type": "string",
+      "x-tier": "extended",
+      "x-required": "no"
+    },
+    "DTCStreetDate": {
+      "type": "string",
+      "x-tier": "core",
+      "x-required": "no"
+    }
+  },
+  "required": [
+    "FullTitle",
+    "PriceUSD",
+    "PrimaryFormatType",
+    "ProductCategory",
+    "Description",
+    "OnSaleDate",
+    "PublisherName",
+    "VariantNumber",
+    "PageCount",
+    "PrimaryContentType",
+    "BISAC1",
+    "BISAC1Description",
+    "Language",
+    "MediaRating",
+    "PublisherCode",
+    "Printing",
+    "Writer",
+    "UnitMeasurements",
+    "UnitWidth",
+    "UnitHeight",
+    "UnitDepth",
+    "UnitWeight",
+    "StockCode"
+  ],
+  "additionalProperties": false
+}
