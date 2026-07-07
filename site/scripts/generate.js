@@ -32,6 +32,13 @@ const DOCS_OUT = path.join(SITE, 'docs');
 const FIELDS_OUT = path.join(DOCS_OUT, 'fields');
 const PICKLISTS_OUT = path.join(DOCS_OUT, 'picklists');
 const DATA_OUT = path.join(SITE, 'src', 'data');
+const STATIC_OUT = path.join(SITE, 'static');
+
+// The production custom domain. The CNAME file (which tells GitHub Pages to use
+// this domain) is emitted ONLY for a production build, so day-to-day deploys to
+// the github.io project URL don't hijack Pages onto an unresolved domain.
+const PROD_DOMAIN = 'docs.cometstandard.com';
+const IS_PROD = process.env.COMET_DEPLOY_TARGET === 'production';
 
 const TIERS = [
   { key: 'essential', label: 'Essential', owner: 'Publisher', blurb: 'The minimum data required to identify a product: title, a primary identifier (UPC/ISBN/EAN), price, and category.' },
@@ -379,11 +386,25 @@ const meta = {
   })),
   requiredCount: fields.filter((f) => requiredShort(f.required) === 'Yes').length,
   conditionalCount: fields.filter((f) => requiredShort(f.required) === 'Conditional').length,
+  deployDomain: PROD_DOMAIN,
 };
 fs.writeFileSync(path.join(DATA_OUT, 'meta.json'), JSON.stringify(meta, null, 2));
 
 // ---------------------------------------------------------------------------
+// 5. CNAME — only for a production (custom-domain) build.
+// ---------------------------------------------------------------------------
+
+const cnamePath = path.join(STATIC_OUT, 'CNAME');
+if (IS_PROD) {
+  ensure(STATIC_OUT);
+  fs.writeFileSync(cnamePath, PROD_DOMAIN + '\n');
+} else if (fs.existsSync(cnamePath)) {
+  fs.rmSync(cnamePath);
+}
+
+// ---------------------------------------------------------------------------
 console.log(
   `Generated: ${fields.length} fields across ${TIERS.length} tiers, ` +
-  `${picklists.length} picklists, version ${version}.`
+  `${picklists.length} picklists, version ${version}. ` +
+  `Target: ${IS_PROD ? `production (${PROD_DOMAIN}, baseUrl /)` : 'github.io project (baseUrl /COMET/)'}.`
 );

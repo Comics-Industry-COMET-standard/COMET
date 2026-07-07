@@ -109,11 +109,11 @@ to accept Actions-based Pages deploys.
 
    or open the failed **Docs site** run in the Actions tab and click **Re-run all jobs**.
 
-When the workflow's `deploy` job goes green, the site is live. Until DNS is set (Phase C),
-it's reachable at the temporary Pages URL GitHub shows in **Settings → Pages** (it will be
-`https://comics-industry-comet-standard.github.io/COMET/` — note asset paths there won't be
-perfect because the site is configured for the custom-domain root; that resolves itself once
-Phase C is done).
+When the workflow's `deploy` job goes green, the site is live at the GitHub Pages project URL,
+**fully working** (assets, links, search): `https://comics-industry-comet-standard.github.io/COMET/`.
+This is the current deploy target — the build serves everything under `/COMET/` so the team can
+review it without any DNS setup. Phase C below is optional and only needed to move to the
+custom domain.
 
 ### How deploys work from here on
 
@@ -125,21 +125,29 @@ Phase C is done).
 
 ---
 
-## Phase C — Point DNS at GitHub (the one step only you can do)
+## Phase C — Move to the custom domain (later, optional)
 
-The repo already ships `site/static/CNAME` containing `docs.cometstandard.com`, so GitHub
-knows the intended domain. You just need the DNS record at whoever hosts DNS for
-`cometstandard.com` (your registrar / DNS provider):
+The site currently deploys to the github.io project URL. To switch it to
+`docs.cometstandard.com`, do all three:
 
-| Type  | Host / Name | Value                                        |
-|-------|-------------|----------------------------------------------|
-| CNAME | `docs`      | `comics-industry-comet-standard.github.io`   |
+1. **Flip the build to production.** In `.github/workflows/docs.yml`, uncomment the
+   `COMET_DEPLOY_TARGET: production` env on the build step. That sets `baseUrl` to `/` and makes
+   the generator emit `static/CNAME` (with `docs.cometstandard.com`) into the deploy. Push.
 
-Then, back in **Settings → Pages → Custom domain**, enter `docs.cometstandard.com` and save,
-and tick **Enforce HTTPS** once the certificate is issued (can take a few minutes to an hour).
+2. **Add DNS** at whoever hosts DNS for `cometstandard.com`:
 
-DNS propagation is usually minutes but can take up to 24h. Until it resolves, use the
-github.io URL.
+   | Type  | Host / Name | Value                                        |
+   |-------|-------------|----------------------------------------------|
+   | CNAME | `docs`      | `comics-industry-comet-standard.github.io`   |
+
+   (or the four A records for apex hosting if you prefer).
+
+3. **Confirm the domain** in **Settings → Pages → Custom domain** (`docs.cometstandard.com`) and
+   tick **Enforce HTTPS** once the certificate is issued (a few minutes to an hour).
+
+DNS propagation is usually minutes but can take up to 24h. Until then, keep using the github.io
+URL. (Do these in this order — pushing the production build before DNS resolves will make the
+github.io URL redirect to a domain that doesn't answer yet.)
 
 ---
 

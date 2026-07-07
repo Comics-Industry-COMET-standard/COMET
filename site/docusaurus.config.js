@@ -7,14 +7,24 @@ const { themes } = require('prism-react-renderer');
 
 const meta = require('./src/data/meta.json');
 
+// Deploy target.
+//   default        -> the GitHub Pages *project* URL, served under /COMET/.
+//                     Everything (assets, links, search) works at
+//                     https://comics-industry-comet-standard.github.io/COMET/
+//   COMET_DEPLOY_TARGET=production -> the custom domain at its root (/).
+//                     Also makes scripts/generate.js emit static/CNAME so Pages
+//                     switches to docs.cometstandard.com on deploy.
+// To publish at the custom domain later:  COMET_DEPLOY_TARGET=production npm run build
+const isProd = process.env.COMET_DEPLOY_TARGET === 'production';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'COMET Standard',
   tagline: 'The open metadata standard for the comics industry',
   favicon: 'img/favicon.png',
 
-  url: 'https://docs.cometstandard.com',
-  baseUrl: '/',
+  url: isProd ? `https://${meta.deployDomain}` : 'https://comics-industry-comet-standard.github.io',
+  baseUrl: isProd ? '/' : '/COMET/',
 
   organizationName: 'Comics-Industry-COMET-standard',
   projectName: 'COMET',

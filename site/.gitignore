@@ -14,6 +14,9 @@
 /docs/changelog.md
 /src/data/
 
+# CNAME is emitted by the generator only for production (custom-domain) builds
+/static/CNAME
+
 # Misc
 .DS_Store
 npm-debug.log*

@@ -40,6 +40,11 @@ jobs:
         run: npm ci
       - name: Build site (runs the YAML→MDX generator via prebuild)
         run: npm run build
+        # Currently deploys to the github.io project URL (served under /COMET/)
+        # for team review. To publish at the custom domain docs.cometstandard.com,
+        # uncomment the env below (this makes baseUrl '/' and emits static/CNAME):
+        # env:
+        #   COMET_DEPLOY_TARGET: production
       - name: Upload Pages artifact
         # Only needed for the deploy job on main.
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
