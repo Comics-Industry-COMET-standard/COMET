@@ -3,7 +3,7 @@
   "$id": "https://cometstandard.com/schema/comet.schema.json",
   "title": "COMET Standard",
   "description": "Machine-readable schema for the COMET comics metadata standard, generated from standard/fields/*.yaml",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "type": "object",
   "properties": {
     "UPC": {
@@ -502,7 +502,9 @@
     "CatalogMonth": {
       "type": "string",
       "x-tier": "extended",
-      "x-required": "no"
+      "x-required": "no",
+      "pattern": "^\\d{4}-\\d{2}$",
+      "x-format": "yearmonth"
     },
     "DiscountCode": {
       "type": "string",
