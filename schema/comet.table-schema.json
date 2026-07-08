@@ -3,7 +3,7 @@
   "name": "comet-standard",
   "title": "COMET Standard",
   "description": "Frictionless Table Schema for the COMET comics metadata standard. Generated from standard/fields/*.yaml. Validates COMET CSV files by column, type, required status, and controlled-vocabulary (picklist) values.",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "fields": [
     {
       "name": "UPC",
@@ -1833,7 +1833,7 @@
     {
       "name": "CatalogMonth",
       "title": "CatalogMonth",
-      "type": "date",
+      "type": "yearmonth",
       "description": "Identifies the original date the item was solicited.  Also known as \"Catalogue Date\". (YYYY-MM), for items that are cancelled and re-solicited, this date will be for the NEW solicitation date.  [Optional]",
       "cometTier": "extended",
       "cometOwner": "distributor",

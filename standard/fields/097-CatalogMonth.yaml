@@ -3,7 +3,7 @@ label: CatalogMonth
 position: 97
 tier: extended
 owner: distributor
-type: Date
+type: YearMonth
 required: 'no'
 length: '7'
 description: |-

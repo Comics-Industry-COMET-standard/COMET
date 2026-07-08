@@ -17,7 +17,7 @@ import yaml
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIELDS_DIR = os.path.join(ROOT, "standard", "fields")
 SCHEMA_PATH = os.path.join(ROOT, "schema", "comet.schema.json")
-VERSION = "1.1.10"
+VERSION = "1.1.11"
 
 
 def load_fields():

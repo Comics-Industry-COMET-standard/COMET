@@ -4,6 +4,13 @@ All notable changes to the COMET Standard are recorded here. Versioning follows 
 
 This history is seeded from the standard's original `Changelog.csv`.
 
+## [1.1.11] — 2026-07-06
+
+### Changed
+- **CCP-0001:** `CatalogMonth` type corrected from `Date` to `YearMonth` to match
+  its actual `YYYY-MM` value format. Corrective clarification — no accepted value
+  changes and no existing file is affected.
+
 ## [1.1.10] — 2025-06-09
 
 - Adopted the 15 fields proposed in November 2024 and merged them into the overall data structure: `VariantType`, `SalesStatusCode`, `SalesTerritory`, `MaxOrderQuantity`, `CoverColor`, `Translator`, `CreatorBio`, `Reviews`, `ComparableTitles`, `NETPriceCA`, `NETPricedCA`, `NETPriceUK`, `NETPricedUK`, `DistributorPublisherCode`, `TitleFamilyID`.
