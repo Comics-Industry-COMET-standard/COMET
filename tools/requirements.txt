@@ -1,0 +1,10 @@
+# Python dependencies for the COMET repository tooling
+# (schema generators and the CSV validator).
+#
+# Install with:   pip3 install -r tools/requirements.txt
+# On macOS you may need:  pip3 install --break-system-packages -r tools/requirements.txt
+# Or use a virtual environment:
+#   python3 -m venv .venv && source .venv/bin/activate && pip install -r tools/requirements.txt
+
+pyyaml          # reads the field/picklist YAML in tools/generate*.py
+frictionless    # validates COMET CSV files in tools/validate_table.py

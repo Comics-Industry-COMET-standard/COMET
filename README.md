@@ -48,6 +48,7 @@ The standard is *living*. Anyone can propose a change — read [CONTRIBUTING.md]
 The reference documentation site is generated directly from `standard/fields/` and `standard/picklists/`, so it can never drift from the standard itself. Regenerate the JSON Schema and validate examples with:
 
 ```
+pip3 install -r tools/requirements.txt   # one-time: install pyyaml + frictionless
 python3 tools/generate.py                # rebuild schema/comet.schema.json (JSON Schema)
 python3 tools/generate_table_schema.py   # rebuild schema/comet.table-schema.json (Table Schema)
 python3 tools/validate_table.py FILE     # validate a CSV against the standard (needs: pip install frictionless)
