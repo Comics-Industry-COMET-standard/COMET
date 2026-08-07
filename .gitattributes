@@ -1,0 +1,28 @@
+# Normalize line endings so files don't show as "modified" just because an
+# editor re-saved them with different endings. All text is stored as LF in the
+# repository (and checked out as LF, which is native on macOS/Linux).
+
+* text=auto eol=lf
+
+# Be explicit for the file types in this repo.
+*.csv   text eol=lf
+*.md    text eol=lf
+*.mdx   text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.json  text eol=lf
+*.py    text eol=lf
+*.js    text eol=lf
+*.txt   text eol=lf
+
+# Binary assets — never touch these.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.psd   binary
+*.ai    binary
+*.tif   binary
+*.tiff  binary
