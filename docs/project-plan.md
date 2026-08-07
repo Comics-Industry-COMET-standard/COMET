@@ -109,7 +109,7 @@ Make it genuinely "living."
 
 - Write `GOVERNANCE.md` (who decides, how a proposal moves idea → discussion → accepted → released) and `CONTRIBUTING.md` (how anyone proposes a change).
 - Formalize the existing versioning rules as written policy and map them onto Git tags.
-- Configure branch protection: all changes to `main` require approval from the 3-person Standards Committee before merge.
+- ~~Configure branch protection: all changes to `main` require approval from the 3-person Standards Committee before merge.~~ **Deferred (2026-08-07).** Unanimous consent stands as *policy* in `GOVERNANCE.md` and is being followed in practice — changes go through a PR that Django Bohren and Brian Garside both approve. What is deferred is the *technical enforcement*: GitHub branch protection is not enabled, and Katie Pryde (no GitHub account) is not a repo collaborator. Revisit before public launch, when outside contributors start opening PRs.
 - Add a lightweight **COMET Change Proposal** template and GitHub issue templates ("propose field," "change picklist value," "report error").
 - Add CI that validates YAML structure on every pull request so a malformed proposal can't merge.
 - Run one real change end-to-end through the process to prove it works. Carry over the "Proposed new fields" note already in the changelog as the first queued proposals.
@@ -160,7 +160,7 @@ Only remaining input: the names of the three Standards Committee members.
 - The standard exists as versioned files in the COMET org repo, tagged at v1.1.10, licensed CC BY 4.0, with history seeded from the existing changelog.
 - A generated `comet.schema.json` validates the real example files.
 - A browsable reference site is live at `docs.cometstandard.com`, generated from the repo.
-- A documented version-control and change-tracking process is live, with branch protection enforcing 3-person committee approval, and at least one change run through it end-to-end.
+- A documented version-control and change-tracking process is live, with committee approval required for merge, and at least one change run through it end-to-end. *(Approval is enforced by policy and practice; GitHub branch protection is deferred — see Phase 3.)*
 - No more authoritative copies in Google Sheets/Drive; the WordPress site links to the new reference.
 
 ---
