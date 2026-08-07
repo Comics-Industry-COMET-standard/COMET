@@ -3,7 +3,7 @@
 **CCP title:** Correct `CatalogMonth` to a year-month type
 **Author(s):** COMET Standards Committee (originated from schema validation)
 **Date:** 2026-07-06
-**Status:** Draft
+**Status:** Accepted — merged 2026-07-08 (PR #1), released in **v1.1.11**
 **Target version:** 1.1.11
 
 ## 1. Summary

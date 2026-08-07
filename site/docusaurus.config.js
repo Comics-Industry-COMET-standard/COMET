@@ -15,6 +15,12 @@ const meta = require('./src/data/meta.json');
 //                     Also makes scripts/generate.js emit static/CNAME so Pages
 //                     switches to docs.cometstandard.com on deploy.
 // To publish at the custom domain later:  COMET_DEPLOY_TARGET=production npm run build
+//
+// Requires Docusaurus >= 3.10. On 3.6.3 the production combination below —
+// baseUrl '/' together with the docs plugin's routeBasePath '/' — failed static
+// rendering with "useDocsVersion is called outside the <DocsVersionProvider>",
+// so every page 500'd at build time. Don't downgrade without re-testing a
+// COMET_DEPLOY_TARGET=production build.
 const isProd = process.env.COMET_DEPLOY_TARGET === 'production';
 
 /** @type {import('@docusaurus/types').Config} */

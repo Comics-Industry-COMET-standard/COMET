@@ -3,7 +3,7 @@
 **CCP title:** Fix required-field gaps in the All-Fields sample
 **Author(s):** COMET Standards Committee (originated from schema validation)
 **Date:** 2026-07-06
-**Status:** Draft
+**Status:** Accepted — merged 2026-07-06; sample now validates cleanly
 **Target version:** (sample correction — no standard change)
 
 ## 1. Summary
