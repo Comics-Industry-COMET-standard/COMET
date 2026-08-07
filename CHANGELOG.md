@@ -4,6 +4,30 @@ All notable changes to the COMET Standard are recorded here. Versioning follows 
 
 This history is seeded from the standard's original `Changelog.csv`.
 
+## [Unreleased]
+
+Non-normative changes — no version bump (see [GOVERNANCE.md](GOVERNANCE.md)). These
+ship with the next release.
+
+### Fixed
+- **`FullTitle` assembly guidance** referenced a "variant description" field that
+  does not exist in COMET. The cover-difference text comes from
+  **`CoverDescription`**, and the ratio from **`VariantRatio`**. Corrected both
+  assembly patterns and fixed the "Collcted" typo. Raised at the 2026-07-09
+  quarterly meeting. Guidance only — no accepted value changes.
+
+### Added
+- **[Data Wish List](proposals/WISHLIST.md)** — motivation-focused intake for
+  raised-but-not-yet-taken-up needs, seeded from the April and 2026-07-09 quarterly
+  meetings. Stage 1 of the proposed field adoption pipeline.
+- **[CCP-0004](proposals/CCP-0004-field-adoption-pipeline.md)** — proposes the
+  five-stage field adoption pipeline (Wish List → Proposed → Candidate → Published →
+  Adoption timeline), direction for which was agreed at the 2026-07-09 meeting.
+
+### Changed
+- CCP-0001 and CCP-0002 marked **Accepted**; both were merged and released but their
+  files still read "Draft."
+
 ## [1.1.11] — 2026-07-06
 
 ### Changed
