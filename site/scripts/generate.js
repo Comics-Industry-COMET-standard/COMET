@@ -110,10 +110,14 @@ function ensure(p) {
   fs.mkdirSync(p, { recursive: true });
 }
 
+// The version shown on the site is the latest *released* version. An
+// "[Unreleased]" section at the top of the changelog collects accepted but
+// unshipped changes, and must not be mistaken for the current version.
 function readVersion() {
   const changelog = fs.readFileSync(path.join(REPO, 'CHANGELOG.md'), 'utf8');
-  const m = changelog.match(/^##\s*\[([^\]]+)\]/m);
-  return m ? m[1] : 'unknown';
+  const headings = [...changelog.matchAll(/^##\s*\[([^\]]+)\]/gm)].map((m) => m[1]);
+  const released = headings.find((h) => /^\d+\.\d+\.\d+$/.test(h));
+  return released || 'unknown';
 }
 
 // ---------------------------------------------------------------------------
