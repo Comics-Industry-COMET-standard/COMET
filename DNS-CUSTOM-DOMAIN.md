@@ -7,6 +7,13 @@ initial push and turning Pages on.
 **Time:** about 15 minutes of work, then up to an hour of waiting for the
 certificate. DNS propagation is usually minutes but can take up to 24h.
 
+> **Progress as of 2026-08-07.** **Step 1 is done** — GoDaddy resolves
+> `docs.cometstandard.com` to the Pages host. **Step 2 is done and waiting in
+> [PR #2](https://github.com/Comics-Industry-COMET-standard/COMET/pull/2)** —
+> merging it deploys to the custom domain, since the deploy job only runs on
+> pushes to `main`. **Steps 3–5 are still to do**, starting with confirming the
+> domain and enabling HTTPS in Settings → Pages once that deploy is green.
+
 ---
 
 ## Where things stand today
