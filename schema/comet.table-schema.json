@@ -643,7 +643,7 @@
       "name": "IssueSort",
       "title": "IssueSort",
       "type": "number",
-      "description": "Sorting number (which should usually be the same as the Series Number, except for when it is not. i.e. Deathmate Black, Deathmate Series, Zero Hour #4 (which was the first issue).  [Optional]",
+      "description": "The number used to put the issues of a series in order. By default it is the same as the SeriesNumber.  [Optional]",
       "cometTier": "core",
       "cometOwner": "publisher",
       "cometRequired": "no"

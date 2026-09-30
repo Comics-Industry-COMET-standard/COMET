@@ -123,17 +123,17 @@ Having each of these pieces of data in its own discrete field gives a system the
 
 #### The Key Types of Data and Their Owners (Field Classes)
 
-The Comet standard contains 108 total fields, including 33 required fields, which describe the details of a product. Within the data, there are three key types of information which describe a product: essential data, core data, and extended data.
+The COMET standard contains 125 total fields that describe the details of a product. Of these, 23 are always required and a further 14 are conditionally required depending on the product type (for example, comics, books, or variant covers). Within the data, there are three key types of information which describe a product: essential data, core data, and extended data.
 
-### Essential Data (6 fields, 3 required for periodical content, 5 required for book content); Owned by Publisher
+### Essential Data (6 fields; 3 always required, plus the applicable identifier: UPC for comics, or ISBN/EAN for books); Owned by Publisher
 
 The minimum data required to create a product: a title, a primary identifier (UPC for periodical content, ISBN/EAN for book-formatted content) which will remain unchanged through the lifecycle of the product, and a retail price. This data is provided by a publisher and will be updated throughout the lifecycle of the product by the publisher. This data should remain the same no matter who the distributor is.
 
-### Core Data (67 fields, 28 required); Owned by Publisher
+### Core Data (77 fields; 19 always required, up to 11 more conditional); Owned by Publisher
 
 Data that describes what the product is. This data is provided by the publisher and will be updated throughout the lifecycle of the product by the publisher. This data should remain the same no matter who the distributor is.
 
-### Extended Data (35 fields, 1 required); Owned by Distributor
+### Extended Data (42 fields, 1 required); Owned by Distributor
 
 Data added by the distributor, which explains how to order a product. This data is provided by a distributor, and will be updated throughout the lifecycle of the product by the distributor.
 

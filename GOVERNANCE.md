@@ -31,20 +31,20 @@ Idea  →  Proposal (issue / CCP)  →  Discussion  →  Committee review  →  
 1. **Proposal.** Anyone opens an issue using a template, or — for anything beyond a typo — a **COMET Change Proposal (CCP)** documenting the rationale (see `.github/CHANGE_PROPOSAL_TEMPLATE.md`).
 2. **Discussion.** The community and Committee discuss on the issue/PR. Trivial fixes can skip straight to review.
 3. **Review.** The Committee evaluates impact, especially on backward compatibility and required fields.
-4. **Decision.** Accepted (merged), deferred, or declined with a reason.
+4. **Decision.** Accepted (merged) or declined. Declined, withdrawn, or superseded proposals are marked **Closed** and kept for the record with the reason they did not proceed.
 5. **Release.** Accepted changes are versioned and recorded in `CHANGELOG.md`.
 
 ## Versioning policy
 
-COMET uses a three-part version, `MAJOR.MINOR.PATCH`, continuing the existing history (current: **1.1.10**). The bump is determined by the *nature* of the change:
+COMET uses a three-part version, `MAJOR.MINOR.PATCH`, continuing the existing history (current: **1.1.11**). The bump is determined by the *nature* of the change:
 
 | Change | Bump | Example |
 |---|---|---|
-| **Breaking / annual** — removing a field, or the scheduled annual revision | **MAJOR** (`2.0.0`) | Annual release; removing a deprecated field |
+| **Breaking** — removing a deprecated field | **MAJOR** (`2.0.0`) | Removing a deprecated field |
 | **Required or type change** — a field becomes required, or its type changes; new required field | **MINOR** (`1.2.0`) | Making a previously optional field required |
 | **Value or clarification** — adding an optional field, adding a picklist value, wording clarifications | **PATCH** (`1.1.11`) | New optional field; new AgeRange value; description fix |
 
-This formalizes the convention already recorded in the changelog: value updates bump the last number, required/type changes bump the middle number, and the annual revision bumps the first.
+This formalizes the convention already recorded in the changelog: value updates bump the last number, required/type changes bump the middle number, and removing a deprecated field bumps the first.
 
 **Corrective clarifications are patches.** A type change only bumps the MINOR
 version when it alters the *data contract* — i.e. what values are accepted. When
@@ -68,13 +68,19 @@ In other words: if it changes what a conforming COMET file may contain, it earns
 version; if it only records, represents, documents, or tools the standard, it does
 not.
 
+**Field `position` is not part of the data contract.** COMET files are read by **header
+name**, not by column position, so changing a field's `position` is **not** a breaking
+change and does not, by itself, require a version bump. To ease transitions, positions are
+**frozen during the 1.x.x line**; from **2.0.0 onward**, positions may be changed freely
+(subject to consistent header formats) without a version change.
+
 Every released version is a **git tag** (e.g. `v1.1.10`) with a matching `CHANGELOG.md` entry.
 
 ## Releases
 
 - **Patch** releases can be cut as accepted changes accumulate.
 - **Minor** releases are cut when required/type changes are ready and communicated.
-- **Major** releases follow the annual review cycle, giving the industry a predictable window to adapt.
+- **Major** releases happen only when a deprecated field is removed, and are communicated with a predictable window so the industry can adapt.
 
 ## Amending this document
 

@@ -119,6 +119,37 @@ than as normative changes.
 Fields carry a description but often not enough guidance to be used consistently.
 The ask is per-field implementation guidance across the dictionary.
 
+> **Status: scoping.** Answer (2026-09): explore what doing this would involve.
+
+**Where things stand (measured 2026-09-29).**
+
+| | Fields |
+|---|---|
+| Total fields | 125 |
+| With no `notes` at all | 97 |
+| Whose `notes` only point to a pick list | 6 |
+| With no `example` | 17 |
+| Required or conditionally required, with no `notes` | 19 |
+
+By tier, the fields with no notes are 2 essential, 56 core, and 39 extended.
+
+**What it would involve.**
+
+1. **Agree a guidance template.** A short, fixed set of things every field's notes
+   should answer: what goes in it, the expected format, the default or what to do
+   when there is no value, a normal example plus an edge case, and common mistakes.
+2. **Write it where the guidance already lives.** Each field's `notes` in
+   `standard/fields/` is already published on the docs site, so no new tooling is
+   needed. Guidance is non-normative, so none of this needs a version bump.
+3. **Work in batches, most-used fields first.**
+   - Batch 1: the 19 required or conditional fields with no notes, plus the essential tier.
+   - Batch 2: the remaining core fields.
+   - Batch 3: the extended fields, which distributors own. Distributor input will matter here.
+4. **Review each batch** with the Committee before it is published.
+
+**Decision needed:** approve the template and start Batch 1. G-002 and G-003 below
+already cover IssueSort, FullTitle, SeriesName, SubTitle, CoverDescription, and Printing.
+
 ### G-002 — `IssueSort`: intended use and default value
 **Raised by:** Jothan · 2026-07-09
 
@@ -126,6 +157,12 @@ Is the default for issue sort the issue number, or empty? The goal is for
 distributors and publishers to actually populate it. Legacy (LGY) numbering appears
 to be solved by this field, but that is not written down anywhere. Needs documented
 guidance including the default.
+
+> **Answered (2026-09).** The default IssueSort is the issue number (SeriesNumber).
+> When an issue falls outside the regular numbering, use a decimal value that places
+> it between its neighbors. Example: if issue #0 falls between #14 and #15, its
+> IssueSort is 14.5. Now written into `standard/fields/037-IssueSort.yaml`. Still
+> open: whether to document IssueSort as the answer to legacy (LGY) numbering.
 
 ### G-003 — Naming conventions
 **Raised by:** 2026-07-09
@@ -142,6 +179,20 @@ Publish the conventions COMET expects, covering at minimum:
 > referenced a non-existent "variant description" field instead of
 > `CoverDescription`. See `standard/fields/004-FullTitle.yaml`.
 
+> **Answered in part (2026-09).** Now written into the field notes for FullTitle,
+> SeriesName, SubTitle, CoverDescription, and Printing.
+>
+> - **Capitalization.** FullTitle, SeriesName, and SubTitle are Title Case.
+>   CoverDescription may be sentence case.
+> - **FullTitle for periodicals:** SeriesName, SeriesNumber, SubTitle, CoverDescription.
+> - **FullTitle for collected editions/GN/TPB/HC:** SeriesName, VolumeTag,
+>   SeriesNumber, SubTitle, CoverDescription, then the FormatType description.
+> - **Reprints.** The printing label goes in SubTitle. Collected editions, GN, TPB,
+>   and HC use "YYYY Printing". Periodicals use "X Print" (for example, "2nd Print").
+>
+> Still open: polybagged vs. bagged vs. blind-bagged, and packaging type
+> terminology (see W-007).
+
 ---
 
 ## Open questions
@@ -151,12 +202,23 @@ here so they get answered, but they are not field requests.
 
 | # | Question | Raised | Status |
 |---|---|---|---|
-| Q-001 | Does a change to a field's `position` count as a breaking update? | 2026-07-09 | Open — see note below |
-| Q-002 | Should the main interchange file stay CSV, or should JSON be offered? How are serialized/repeating fields represented? | 2026-07-09 | Open |
+| Q-001 | Does a change to a field's `position` count as a breaking update? | 2026-07-09 | **Answered** — see below |
+| Q-002 | Should the main interchange file stay CSV, or should JSON be offered? How are serialized/repeating fields represented? | 2026-07-09 | **Answered (part)** — see below |
 
-**On Q-001.** Position numbering already uses large gaps (the 2300 block is reserved
-for Issue Sort) specifically so that insertions do not renumber everything. The
-Committee should decide whether `position` is part of the data contract — if
-consumers read COMET files positionally rather than by header name, it is breaking;
-if files are always read by header, it is not. This needs a written answer in
+**Q-001 — Answered.** A change to a field's `position` does **not** count as a breaking
+update. COMET files are read by **header name**, not by column position, so positions
+may change as long as header formats stay consistent. To ease transitions, **positions
+will not be moved during the 1.x.x line**; from **2.0.0 onward, a position change no
+longer requires a version bump.** This is now written into the versioning policy in
 `GOVERNANCE.md`.
+
+**Q-002 — Answered (part).** CSV remains the **primary** interchange format, and **JSON
+may be offered as an additional format.** (A machine-readable JSON Schema already exists
+alongside the Frictionless Table Schema — see the Schemas page.) Still open: exactly how
+serialized / repeating fields are represented in the JSON form — to be specified when the
+JSON format is published.
+
+Consistent with the Q-001 answer, any JSON form must be keyed by **field name, not
+position** (which JSON is by nature), so the "read by header/key name, not column
+position" rule carries over to JSON unchanged. This should be stated explicitly in the
+JSON format specification when it is published.

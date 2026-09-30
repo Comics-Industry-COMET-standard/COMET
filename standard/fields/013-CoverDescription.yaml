@@ -9,4 +9,6 @@ length: '256'
 description: |-
   The CoverDescription field describes the cover differences between different editions. Should not contain the word "Cover".
 example: Artgerm Full Art
-notes: This is NOT for describing cover A or B, this is for describing a theme or artist.
+notes: |-
+  This is NOT for describing cover A or B, this is for describing a theme or artist.
+  CoverDescription may be written in sentence case.

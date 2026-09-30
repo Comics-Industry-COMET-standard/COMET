@@ -8,3 +8,5 @@ required: 'yes'
 length: '3'
 description: What printing is the item
 example: '2'
+notes: |-
+  The printing number as a plain number. The human-readable printing label ("2026 Printing" or "2nd Print") goes in the SubTitle.

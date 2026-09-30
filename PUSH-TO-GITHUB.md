@@ -127,9 +127,8 @@ custom domain.
 
 ## Phase C — Move to the custom domain (later, optional)
 
-> **See [DNS-CUSTOM-DOMAIN.md](DNS-CUSTOM-DOMAIN.md)** for the full step-by-step
-> runbook — GoDaddy-specific instructions, the required ordering, verification
-> commands, rollback, and troubleshooting. The summary below is the short version.
+> **Done.** The site now lives at docs.cometstandard.com. The detailed DNS runbook
+> has been retired; it is still in the git history if the move ever needs redoing.
 
 The site currently deploys to the github.io project URL. To switch it to
 `docs.cometstandard.com`, do all three:

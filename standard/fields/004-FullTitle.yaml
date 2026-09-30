@@ -10,6 +10,7 @@ description: |-
   The Full Title field encompasses the full title of an item. This field may contain relevant information such as series number and  variant information, where applicable.
 example: 'Something is Killing the Children #1 Fall of the House of Slaughter Artgerm Full Art (Mature)'
 notes: |-
-  Periodical: [SeriesName] #[issue number] [one-shot] Cover [cvr letter] [CoverDescription] [VariantRatio in 1:## format]
-  Collected/GN/TPB/HC: [SeriesName] [volume abbreviation] [number with leading zero] [CoverDescription] [format abbr]
-  The bracketed names above refer to COMET fields. Note that the cover-difference text comes from CoverDescription — there is no "VariantDescription" field.
+  Periodical: [SeriesName] #[SeriesNumber] [SubTitle] [CoverDescription]
+  Collected/GN/TPB/HC: [SeriesName] [VolumeTag] [SeriesNumber] [SubTitle] [CoverDescription] [FormatType Description]
+  The bracketed names above refer to COMET fields. [FormatType Description] is the description of the PrimaryFormatType code in the FormatType pick list (for example, "Hardcover"). Leave out any part whose field is empty. The cover-difference text comes from CoverDescription; there is no "VariantDescription" field.
+  Write the FullTitle in Title Case. The CoverDescription portion may stay in sentence case.
