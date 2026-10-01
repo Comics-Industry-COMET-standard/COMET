@@ -24,6 +24,8 @@ ship with the next release.
   replaces the 2026-08-07 pattern above. Capitalization and reprint-labelling
   conventions were added to SeriesName, SubTitle, CoverDescription, and Printing.
   Guidance only — no accepted value changes.
+- **`FullTitle` number format.** Periodicals put a "#" before the SeriesNumber.
+  Collected editions use the plain number, with no "#" and no leading zero.
 - **Field counts** in the Implementation Guide and white paper now reflect the
   current 125 fields, 23 always required and 14 conditionally required.
 
