@@ -126,12 +126,13 @@ The ask is per-field implementation guidance across the dictionary.
 | | Fields |
 |---|---|
 | Total fields | 125 |
-| With no `notes` at all | 97 |
+| With no `notes` at all | 95 |
 | Whose `notes` only point to a pick list | 6 |
 | With no `example` | 17 |
-| Required or conditionally required, with no `notes` | 19 |
+| Required or conditionally required, with no `notes` | 18 |
 
-By tier, the fields with no notes are 2 essential, 56 core, and 39 extended.
+By tier, the fields with no notes are 2 essential, 54 core, and 39 extended. These
+counts include the SubTitle and Printing notes added for G-003.
 
 **What it would involve.**
 
@@ -142,7 +143,8 @@ By tier, the fields with no notes are 2 essential, 56 core, and 39 extended.
    `standard/fields/` is already published on the docs site, so no new tooling is
    needed. Guidance is non-normative, so none of this needs a version bump.
 3. **Work in batches, most-used fields first.**
-   - Batch 1: the 19 required or conditional fields with no notes, plus the essential tier.
+   - Batch 1: the 18 required or conditional fields with no notes. This includes
+     both essential fields that have none.
    - Batch 2: the remaining core fields.
    - Batch 3: the extended fields, which distributors own. Distributor input will matter here.
 4. **Review each batch** with the Committee before it is published.
