@@ -220,7 +220,10 @@ for (const tier of TIERS) {
     }
 
     if (f.notes) {
-      out.push(`**Notes:** ${String(f.notes).trim().replace(/\r?\n+/g, ' ')}`);
+      // Keep each line of a multi-line note on its own line (a Markdown hard break),
+      // so patterns like the FullTitle assembly rules don't run together.
+      const noteLines = String(f.notes).trim().split(/\r?\n+/).map((l) => l.trim()).filter(Boolean);
+      out.push(`**Notes:** ${noteLines.join('\\\n')}`);
       out.push('');
     }
 

@@ -9,3 +9,6 @@ length: '256'
 description: |-
   The Subtitle field is a secondary or explanatory title, often printed on the cover of an item.
 example: Fall of the House of Slaughter
+notes: |-
+  Write the SubTitle in Title Case.
+  Reprints: use the SubTitle to label a new printing. For collected editions, GN, TPB, and HC, use "YYYY Printing" (for example, "2026 Printing"). For periodicals, use "X Print" (for example, "2nd Print"). The Printing field carries the printing number itself.

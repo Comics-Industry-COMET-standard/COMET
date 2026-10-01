@@ -16,6 +16,17 @@ ship with the next release.
   assembly patterns and fixed the "Collcted" typo. Raised at the 2026-07-09
   quarterly meeting. Guidance only — no accepted value changes.
 
+- **Field guidance for naming and sorting** (Data Wish List G-002 and G-003).
+  `IssueSort` now documents its default (the SeriesNumber) and the decimal rule for
+  out-of-sequence issues. `FullTitle` assembly patterns now follow the Committee's
+  answer: SeriesName, SeriesNumber, SubTitle, CoverDescription for periodicals, with
+  VolumeTag and the FormatType description added for collected editions. This
+  replaces the 2026-08-07 pattern above. Capitalization and reprint-labelling
+  conventions were added to SeriesName, SubTitle, CoverDescription, and Printing.
+  Guidance only — no accepted value changes.
+- **Field counts** in the Implementation Guide and white paper now reflect the
+  current 125 fields, 23 always required and 14 conditionally required.
+
 ### Added
 - **[Data Wish List](proposals/WISHLIST.md)** — motivation-focused intake for
   raised-but-not-yet-taken-up needs, seeded from the April and 2026-07-09 quarterly
@@ -25,6 +36,18 @@ ship with the next release.
   Adoption timeline), direction for which was agreed at the 2026-07-09 meeting.
 
 ### Changed
+- **Contributing** now offers two ways in: contact the COMET team, or open an issue.
+  The Standards Committee handles the technical implementation.
+- **Versioning policy.** Major versions are no longer annual; a major release happens
+  only when a deprecated field is removed. Field `position` is not part of the data
+  contract (Open Question Q-001): positions are frozen through 1.x and may change
+  freely from 2.0.0.
+- **Q-002 answered in part.** CSV stays the primary format, and JSON may be offered
+  as an additional one.
+- **Change Proposals** are kept permanently and grouped as Open, Accepted, Adopted,
+  or Closed.
+- **Docs site** keeps multi-line field notes on separate lines.
+- Retired the DNS custom-domain runbook now that docs.cometstandard.com is live.
 - CCP-0001 and CCP-0002 marked **Accepted**; both were merged and released but their
   files still read "Draft."
 
