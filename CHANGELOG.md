@@ -30,6 +30,10 @@ ship with the next release.
   current 125 fields, 23 always required and 14 conditionally required.
 
 ### Added
+- **Field notes template** (Data Wish List G-001). Every field's notes will answer
+  the same five questions: what goes in it, format, when empty, examples, and common
+  mistakes. Written up in `standard/fields/README.md`. `IssueSort` is the first field
+  in the new format.
 - **[Data Wish List](proposals/WISHLIST.md)** — motivation-focused intake for
   raised-but-not-yet-taken-up needs, seeded from the April and 2026-07-09 quarterly
   meetings. Stage 1 of the proposed field adoption pipeline.
