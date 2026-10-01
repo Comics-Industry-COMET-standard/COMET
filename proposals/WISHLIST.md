@@ -119,7 +119,9 @@ than as normative changes.
 Fields carry a description but often not enough guidance to be used consistently.
 The ask is per-field implementation guidance across the dictionary.
 
-> **Status: scoping.** Answer (2026-09): explore what doing this would involve.
+> **Status: template adopted 2026-09-30.** The five-point notes template is written up
+> in [`standard/fields/README.md`](../standard/fields/README.md), with IssueSort as the
+> worked example. Next step: Batch 1.
 
 **Where things stand (measured 2026-09-29).**
 
@@ -149,7 +151,7 @@ counts include the SubTitle and Printing notes added for G-003.
    - Batch 3: the extended fields, which distributors own. Distributor input will matter here.
 4. **Review each batch** with the Committee before it is published.
 
-**Decision needed:** approve the template and start Batch 1. G-002 and G-003 below
+**Decided 2026-09-30:** template adopted. Batch 1 is next. G-002 and G-003 below
 already cover IssueSort, FullTitle, SeriesName, SubTitle, CoverDescription, and Printing.
 
 ### G-002 — `IssueSort`: intended use and default value

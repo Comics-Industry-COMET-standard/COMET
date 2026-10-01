@@ -10,4 +10,8 @@ description: |-
   The number used to put the issues of a series in order. By default it is the same as the SeriesNumber.
 example: '14.5'
 notes: |-
-  Default: use the SeriesNumber. For an issue that falls outside the regular numbering, use a decimal value that places it between the issues it sits between. Example: if issue #0 falls between issue #14 and issue #15, its IssueSort is 14.5. Decimal places are allowed.
+  What goes in it: The number used to put the issues of a series in order.
+  Format: A decimal number, with up to two decimal places. For an issue that falls outside the regular numbering, use a value that places it between the issues it sits between.
+  When empty: Use the SeriesNumber.
+  Examples: Issue #12 has an IssueSort of 12. If issue #0 falls between issue #14 and issue #15, its IssueSort is 14.5.
+  Common mistakes: Leaving it blank, which leaves every retailer to guess the order.
